@@ -54,7 +54,7 @@ class product {
 
     }
 
-    public function getAllProduct(){
+    public function getAllProduct() {
         $quary = "select * from product" ;
         $result = mysqli_query($this->conn,$quary);
         if ($result) {
@@ -62,8 +62,7 @@ class product {
         }
     }
 
-    public function getProductByCode($code)
-    {
+    public function getProductByCode($code) {
         $quary = "select * from product where code = '$code'" ;
         $result = mysqli_query($this->conn,$quary);
         if ($result) {
