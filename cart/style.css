@@ -1,0 +1,31 @@
+.table {
+    height: 40vh; 
+}
+  
+.scrollable-tbody {
+    display: block;
+    overflow-y: auto;
+    max-height: 40vh; 
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+thead {
+    width: calc(100% - 1em);
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
