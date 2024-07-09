@@ -28,6 +28,32 @@ class Order {
         }
     }
 
+    public function addOrder($price,$name,$address,$pNo) {
+        try {
+            $id = $this->cOID + 1 ;
+            $quary = "insert into `order` values($id,$price,NOW(),'$name','$address',$pNo,1)";
+            $result =mysqli_query($this->conn,$quary);
+            if ($result) {
+                $this->cOID++ ;
+                return $id;
+            }
+        } catch (\Throwable $th) {
+            return false ;
+        } 
+    }
+
+    public function addItemsToOrder($oID,$pID,$count) {
+        try {
+            $quary = "insert into oderproduct values($oID,$pID,$count)";
+            $result = mysqli_query($this->conn,$quary);
+            if ($result) {
+                return true ;
+            }
+        } catch (\Throwable $th) {
+            return false ;
+        }
+    }
+
     public function getPendingOrders() {
         try {
             $query = "SELECT * FROM `order` where `status`= 1 order by `date` desc";
@@ -80,8 +106,7 @@ class Order {
         $query = "SELECT * FROM `order` where `OID` = $oid";
         $result = mysqli_query($this->conn, $query);
         if ($result) {
-            return $result = mysqli_fetch_row($result);
-            
+            return $result = mysqli_fetch_row($result);           
         }
     }
 
