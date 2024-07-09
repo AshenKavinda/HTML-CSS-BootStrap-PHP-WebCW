@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 06, 2024 at 02:53 PM
+-- Generation Time: Jul 09, 2024 at 02:46 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -58,6 +58,7 @@ CREATE TABLE IF NOT EXISTS `order` (
   `cName` varchar(50) NOT NULL,
   `cAddress` varchar(100) NOT NULL,
   `cPno` int NOT NULL,
+  `status` int NOT NULL,
   PRIMARY KEY (`OID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -65,8 +66,8 @@ CREATE TABLE IF NOT EXISTS `order` (
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`OID`, `price`, `date`, `cName`, `cAddress`, `cPno`) VALUES
-(1, 3000, '2024-07-06', 'Ashen', 'Kalegana', 774237321);
+INSERT INTO `order` (`OID`, `price`, `date`, `cName`, `cAddress`, `cPno`, `status`) VALUES
+(1, 3000, '2024-07-06', 'Ashen', 'Kalegana', 774237321, 1);
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 
 INSERT INTO `product` (`code`, `name`, `price`, `stock`, `image`) VALUES
 (1, 'BigThree', 1000, 1, 'bigThree.jpeg'),
-(2, 'Lindro 100g', 350, 1, 'redGood.jpeg'),
+(2, 'Lindro 100g', 350, 0, 'redGood.jpeg'),
 (3, 'Dairy Milk 60g', 400, 1, 'download.jpeg'),
 (4, '21 pack', 2000, 1, 'giftPack.jpeg'),
 (5, 'Rocher 200g', 800, 1, 'brown.jpeg');
