@@ -1,18 +1,17 @@
 <?php 
-  $conn = mysqli_connect("localhost","db123","12345678") ;
+  require_once("../classes/product.class.php");
 
-  mysqli_select_db($conn,"webDB");
+  $product = new product;
 
-  $query = "select * from itemstbl" ;
-  $result = mysqli_query($conn,$query);
+  $result = $product->getAllProduct();
 
   function printAll($resdata)
   {
     while ($row = mysqli_fetch_array($resdata)) {
-      $image= $row[3] ;
+      $image= $row[4] ;
       $name = $row[1] ;
       $price = $row[2] ;
-      $stock = $row[4] ;
+      $stock = $row[3] ;
 
       $av = "";
 
@@ -28,7 +27,7 @@
       <div class='col-3'>
           <div class='m-2'>
             <div class='card shadow'>
-              <img class='card-img-top' src=$image >
+              <img class='card-img-top' src=../adminPanel/pImg/$image >
               <div class='card-body'>
                 <h5 class='card-title'>$name</h5>
                 <span class='badge badge-success'>Rs.$price.00</span>";
@@ -61,7 +60,7 @@
     <title>Chocolate</title>
     <style>
     </style>
-    <link rel="stylesheet" href="productStyles.Css">
+    <link rel="stylesheet" href="productStyles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
