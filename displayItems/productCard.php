@@ -1,4 +1,5 @@
 <?php 
+  //database connection
   require_once("../classes/product.class.php");
 
   $product = new product;
