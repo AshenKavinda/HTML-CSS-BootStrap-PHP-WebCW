@@ -214,6 +214,58 @@ html ::-webkit-scrollbar{
 } 
 
 
-
-
 /* gallery */
+
+/* contact us */
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/topview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formC {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-sizing: border-box; 
+}
+
+.formC input,
+.formC textarea {
+    border: 1px solid #ccc; 
+    margin: 10px 0;
+    padding: 15px; 
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+.formC button {
+    padding: 15px 0; 
+    background: #322C2B;
+    color: white;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.formC button:hover {
+    background-color: #803D3B; 
+    color: white; 
+}
+
+/* contact us */
