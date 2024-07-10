@@ -16,10 +16,21 @@ if (isset($_POST['add_to_cart'])) {
 
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
+    } else {
+        $existItem = false;
+        foreach ($_SESSION['cart'] as $index => &$item) {
+            if ($item['id'] == $item_id) {
+                $item['quantity'] += $item_quantity;
+                $existItem = true;
+                break;
+            }
+        }
+        unset($item);
+    
+        if ($existItem == false) {
+            $_SESSION['cart'][] = $cart_item;
+        }
     }
-
-    $_SESSION['cart'][] = $cart_item;
-
     header("Location: cart.php");
     exit();
 }

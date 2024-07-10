@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-function printCartItem() {
-    echo "";
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +11,10 @@ function printCartItem() {
 </head>
 <body>
     <div class="container mt-5 p-4">
-        <h1 class="mb-5">Shopping Cart</h1>
+        <div class="mb5">
+            <a href="index1.php?" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>        
+            <h1>Shopping Cart</h1>
+        </div>
         <?php if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
             <div class="w-100 h-100 d-flex flex-column align-items-center position-relative overflow-hidden">
                 <div class="w-75" style="max-height: 100%;object-fit: cover;">
@@ -57,7 +57,7 @@ function printCartItem() {
                 </div>
             </div>
 
-            <form action="" method="post">
+            <form action="deliveryInformation.php" method="post">
                 <?php
                     $total = 0 ;
                     foreach ($_SESSION['cart'] as $index => $item) {
@@ -67,7 +67,7 @@ function printCartItem() {
                 <div class="d-flex flex-row gap-4">
                     <h2>Total = <?= $total ?></h2>
                     <input type="hidden" name="total" value="<?php echo $total; ?>">
-                    <button class="btn btn-primary">Place Order</button>
+                    <button type="submit" class="btn btn-primary">Place Order</button>
                 </div>     
             </form>
 
