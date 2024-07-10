@@ -211,46 +211,75 @@ html ::-webkit-scrollbar{
 } 
 
 body{
-    background-image: url('choc3.jpeg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+    background-image: url('choc3.jpeg.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+
+    height: 100% !important;
 }
 
 .btn-primary{
-    background-color: #3a170d;  
-    width: 100%;
-    height: 10%;
-    border: none;
-    vertical-align: bottom;
-    position: absolute;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    background-color: #3a170d !important;  
+    width: 100% !important;
+    height: 10% !important;
+    padding: 10px !important;
+    border: none !important;
+
+    object-fit: cover !important;
 }
 
 .card-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: 100px !important;
     
 }
 
-.card{
-    background-color:rgba(207, 207, 207, 0.85);
-    border: 0px;
+.card-bg{
+    background-color:rgba(207, 207, 207, 0.85) !important;
+    border: 0px !important;
+    overflow: hidden !important;
+    position: relative !important;
 }
 
 .card-text{
-    height: 100px;
+    height: 100px !important;
 }
 
 .badge-success{
-    background-color: #C3883D;
-    font-size: 15px;
-    position: absolute;  
+    background-color: #C3883D !important;
+    font-size: 15px !important;
+    position: absolute !important;  
 }
 
 .card-img-top{
-    border-radius: 5px; 
-    border-bottom: #3a170d; 
-    border: 5px; 
-    height: 175px;
+    border-radius: 5px !important; 
+    border-bottom: #3a170d !important; 
+    border: 5px !important; 
+    height: 175px !important;
+}
+.badge{
+    float: right;
+}
+
+.Quantity{
+    font-weight:bold !important;
+}
+
+.btn1{
+    background-color: yellow !important;
+    color: #322C2B !important;
+    width: 20px !important;
+    height: 30px !important;
+    border-radius: 5px ;
+    text-align: center;
+    font-weight: bold !important;
+    object-fit: cover;
+}
+
+.badge-available{
+    background-color: green !important;
+}
+.badge-outofstock{
+    background-color: red !important;
 }
