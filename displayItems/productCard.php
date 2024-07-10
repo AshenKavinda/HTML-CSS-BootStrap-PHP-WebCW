@@ -1,35 +1,20 @@
 <?php 
-<<<<<<< HEAD
+
   //database connection
   require_once("../classes/product.class.php");
 
   $product = new product;
 
   $result = $product->getAllProduct();
-=======
-  $conn = mysqli_connect("localhost","db123","12345678") ;
-
-  mysqli_select_db($conn,"webDB");
-
-  $query = "select * from itemstbl" ;
-  $result = mysqli_query($conn,$query);
->>>>>>> parent of c18c7d7 (Revert "displayItemsInDataBase")
 
   function printAll($resdata)
   {
     while ($row = mysqli_fetch_array($resdata)) {
-<<<<<<< HEAD
+
       $image= $row[4] ;
       $name = $row[1] ;
       $price = $row[2] ;
       $stock = $row[3] ;
-=======
-      $image= $row[3] ;
-      $name = $row[1] ;
-      $price = $row[2] ;
-      $stock = $row[4] ;
->>>>>>> parent of c18c7d7 (Revert "displayItemsInDataBase")
-
       $av = "";
 
       if($stock > 0)
@@ -44,11 +29,8 @@
       <div class='col-3'>
           <div class='m-2'>
             <div class='card shadow'>
-<<<<<<< HEAD
               <img class='card-img-top' src=../adminPanel/pImg/$image >
-=======
-              <img class='card-img-top' src=$image >
->>>>>>> parent of c18c7d7 (Revert "displayItemsInDataBase")
+
               <div class='card-body'>
                 <h5 class='card-title'>$name</h5>
                 <span class='badge badge-success'>Rs.$price.00</span>";
@@ -81,11 +63,8 @@
     <title>Chocolate</title>
     <style>
     </style>
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="productStyles.css">
-=======
-    <link rel="stylesheet" href="productStyles.Css">
->>>>>>> parent of c18c7d7 (Revert "displayItemsInDataBase")
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
