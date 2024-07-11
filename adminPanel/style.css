@@ -25,6 +25,8 @@ body {
     width: 100%;
 }
 
+/*scrolable table*/
+
 .table {
     height: 40vh; 
 }
@@ -56,6 +58,8 @@ thead {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+
+/**/
 
 .btnLink {
     width: 100%;

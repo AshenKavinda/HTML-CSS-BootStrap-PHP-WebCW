@@ -28,6 +28,41 @@ class Order {
         }
     }
 
+    public function addOrder($price,$name,$address,$pNo) {
+        try {
+            $vPrice = mysqli_real_escape_string($this->conn,$price);
+            $vName = mysqli_real_escape_string($this->conn,$name);
+            $vAddress = mysqli_real_escape_string($this->conn,$address);
+            $vPNo = mysqli_real_escape_string($this->conn,$pNo);
+            $id = $this->cOID + 1 ;
+            $quary = "insert into `order` values($id,$vPrice,NOW(),'$vName','$vAddress',$vPNo,1)";
+            $result =mysqli_query($this->conn,$quary);
+            if ($result) {
+                $this->cOID++ ;
+                return $id;
+            }else {
+                return false;
+            }
+        } catch (\Throwable $th) {
+            return false ;
+        } 
+    }
+
+    public function addItemsToOrder($oID,$pID,$count) {
+        try {
+            $quary = "insert into oderproduct values($oID,$pID,$count)";
+            $result = mysqli_query($this->conn,$quary);
+            if ($result) {
+                return true ;
+            }
+            else {
+                return false;
+            }
+        } catch (\Throwable $th) {
+            return false ;
+        }
+    }
+
     public function getPendingOrders() {
         try {
             $query = "SELECT * FROM `order` where `status`= 1 order by `date` desc";
@@ -80,8 +115,7 @@ class Order {
         $query = "SELECT * FROM `order` where `OID` = $oid";
         $result = mysqli_query($this->conn, $query);
         if ($result) {
-            return $result = mysqli_fetch_row($result);
-            
+            return $result = mysqli_fetch_row($result);           
         }
     }
 
@@ -90,6 +124,22 @@ class Order {
         $result = mysqli_query($this->conn, $query);
         if ($result) {
             return $result ;
+        }
+    }
+
+    public function getBestSellingProduct() {
+        try {
+            $quary = "SELECT PID FROM oderproduct GROUP BY PID ORDER BY PID_Count DESC LIMIT 3";
+            $result = mysqli_query($this->conn,$quary);
+            if ($result) {
+                return $result;
+            }
+            else {
+                return 0 ;
+            }
+            //code...
+        } catch (\Throwable $th) {
+            return 0;
         }
     }
 }
