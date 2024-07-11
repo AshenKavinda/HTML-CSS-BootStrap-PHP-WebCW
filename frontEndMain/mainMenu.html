@@ -206,22 +206,19 @@
           <!-- contact us-->
 
           <section id="contact">
-            
-                <div class="container">
-
-                  <form class="formC">
+            <div class="container">
+                <form class="formC" action="https://api.web3forms.com/submit" method="POST">
                     <h3>Contact Us</h3>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="text" id="email" placeholder="Your Email" required>
-                    <input type="text" id="phone" placeholder="Contact Number" required>
-                    <textarea id="msg" rows="5" placeholder="How can we help you? Drop us a msg :D "></textarea><br>
+                    <input type="hidden" name="access_key" value="598608aa-c0bb-4861-b9bb-d8215d4cd640">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" name="phone" placeholder="Contact Number" required>
+                    <textarea id="msg" name="message" rows="5" placeholder="How can we help you? Drop us a msg :D "></textarea><br>
                     <button type="submit">Send</button>
-    
-                  </form>       
-                          
-                </div>
-                         
-          </section>
+                </form>
+            </div>
+        </section>
+        
 
           
 
