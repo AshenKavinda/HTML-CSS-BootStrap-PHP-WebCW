@@ -1,5 +1,7 @@
 .table {
-    height: 40vh; 
+    height: 225px;
+    border-radius: 10px; 
+    border-top-left-radius: 10px;
 }
   
 .scrollable-tbody {
@@ -29,3 +31,54 @@ thead {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+
+.btn-primary-1{
+    background-color: #3a170d;
+    color: #dee2e6;
+    font-weight: bold;
+    height: 55px;
+    font-size:30px;
+    text-align: center; 
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(choc3.jpeg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 100%;
+}
+h1{
+    color: #dee2e6;
+}
+
+h2{
+    color: white;
+}
+.btn-primary{
+    background-color:white ;
+    border: none;
+    text-align: center;
+    position: relative;
+    height: 37px;
+    justify-content:right;
+    color: black;
+    font-weight: bold;
+}
+
+.head{
+    /* background-color:chocolate; */
+    border-radius: 5px;
+    width: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* color: white; */
+    
+}
+.btn-primary:hover{
+    background-color: #322C2B;
+    color: white;
+}
+
+
