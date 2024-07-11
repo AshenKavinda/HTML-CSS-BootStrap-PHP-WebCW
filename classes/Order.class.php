@@ -65,7 +65,7 @@ class Order {
 
     public function getPendingOrders() {
         try {
-            $query = "SELECT * FROM `order` where `status`= 1 order by `date` desc";
+            $query = "SELECT * FROM `order` where `status`= 1 order by `OID`";
             $result = mysqli_query($this->conn, $query);
             if ($result) {
                 return $result;
@@ -120,7 +120,7 @@ class Order {
     }
 
     public function getOrderProductByOID($oid) {
-        $query = "SELECT pr.name , pr.price , ort.count from oderproduct ort inner join product pr on pr.code = ort.PID where ort.OID = 1";
+        $query = "SELECT pr.name , pr.price , ort.count from oderproduct ort inner join product pr on pr.code = ort.PID where ort.OID = $oid";
         $result = mysqli_query($this->conn, $query);
         if ($result) {
             return $result ;

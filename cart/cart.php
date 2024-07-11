@@ -12,7 +12,7 @@ session_start();
 <body>
     <div class="container mt-5 p-4">
         <div class="mb5">
-            <a href="index1.php?" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>        
+            <a href="../displayItems/productCard.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>        
             <h1>Shopping Cart</h1>
         </div>
         <?php if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
