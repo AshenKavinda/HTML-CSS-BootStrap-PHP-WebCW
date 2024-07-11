@@ -24,19 +24,21 @@
             <div class='card shadow card-bg '>
               <img class='card-img-top' src=../adminPanel/pImg/$image >
 
-              <div class='card-body my-2'>
+              <div class='card-body d-flex flex-column my-2 gap-3'>
+              <div>
                 <h5 class='card-title'>$name</h5>
                 <span class='badge badge-success'>Rs.$price.00</span>
 
                 <span class='badge ".($av == 'Available' ? 'badge-available' : 'badge-outofstock')."' style='margin-left: 20px;'>$av</span>
-              
-                <div class='w-100 d-flex my-5' >
+              </div>
+
+                <div class='w-100 d-flex justify-content-end' >
                   <div style='badge'>
-                    Quantity <input type='number' id='quantity' name = '' value= '1' style='width:35px; border:none;'>
+                    Quantity <input type='number' id='quantity' name = '' value= '1' style='width:35px; border:none; border-radius:5px;'>
                   </div>
                 </div>
-                <a href='#' class='btn btn-primary'>Add to Cart</a>
-              </div>
+                <a href='#' class='btn btn-primary' <?php echo $stock == 0 ? 'disabled' : ''; ?> > Add to Cart</a>
+                </div>
             </div>
           </div>
       </div>

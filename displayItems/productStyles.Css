@@ -236,7 +236,7 @@ body{
 }
 
 .card-bg{
-    background-color:rgba(207, 207, 207, 0.85) !important;
+    background-color:rgba(207, 207, 207, 0.7) !important;
     border: 0px !important;
     overflow: hidden !important;
     position: relative !important;
@@ -282,4 +282,13 @@ body{
 }
 .badge-outofstock{
     background-color: red !important;
+}
+
+.btn-primary:hover{
+    background-color:#322C2B !important;
+}
+
+.disabled{
+    background-color: #322C2B;
+    cursor:not-allowed;
 }
