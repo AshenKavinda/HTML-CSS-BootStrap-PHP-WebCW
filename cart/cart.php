@@ -37,16 +37,16 @@ session_start();
                                     <form method="post" action="update_cart.php">
                                     <td><input style="width: 4rem;" type="number" name="item_quantity" value="<?php echo $item['quantity']; ?>" min="1"></td>
                                     <td><?php echo $item['price'] * $item['quantity']; ?></td>
-                                    <td class="w-100 d-flex flex-row justify-content-center"> 
+                                    <td class="w-100 d-flex flex-row gap-1 justify-content-center"> 
                                         <div>
                                             <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="update_quantity">U</button>
+                                            <button type="submit" name="update_quantity" style="background-color: green;">U</button>
                                             </form>
                                         </div>
                                         
                                         <form method="post" action="remove_from_cart.php">
                                             <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="remove_item">R</button>
+                                            <button type="submit" name="remove_item" style="background-color: red;">R</button>
                                         </form>
                                     </td>
                                 </tr>
