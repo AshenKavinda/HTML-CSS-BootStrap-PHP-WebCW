@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5 p-4">
+    <div class="container mt-5">
         <div class="mb5 d-flex flex-row gap-4 m-3">
             <a href="../displayItems/productCard.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4 mt-2"><</button></a>        
             <h1>Shopping Cart</h1>
@@ -39,14 +39,14 @@ session_start();
                                     <td><?php echo $item['price'] * $item['quantity']; ?></td>
                                     <td class="w-100 d-flex flex-row gap-1 justify-content-center"> 
                                         <div>
-                                            <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="update_quantity" style="background-color: green;">U</button>
+                                            <input type="hidden" name="item_index" value="<?php echo $index; ?>">                                    
+                                            <button class="btnUpdate" type="submit" name="update_quantity"></button>
                                             </form>
                                         </div>
                                         
                                         <form method="post" action="remove_from_cart.php">
                                             <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="remove_item" style="background-color: red;">R</button>
+                                            <button class="btnDelete" type="submit" name="remove_item"></button>
                                         </form>
                                     </td>
                                 </tr>

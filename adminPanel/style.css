@@ -76,3 +76,13 @@ thead {
     font-weight: 700;
 }
   
+.btnEdit{
+    background-color: green !important;
+    color: aliceblue !important;
+    border:none !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+.btnDelete{
+
+}
