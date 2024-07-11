@@ -10,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5 p-4">
+    <div class="container mt-5">
         <div class="mb5 d-flex flex-row gap-4 m-3">
             <a href="../displayItems/productCard.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4 mt-2"><</button></a>        
             <h1>Shopping Cart</h1>

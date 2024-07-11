@@ -17,8 +17,8 @@ function printProductTable($product)
               <td>$row[3]</td>
               <td>$row[4]</td>
               <td>
-                  <a href=\"formEdit.php?id=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">E</button></a>
-                  <a href=\"delete.php?id=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">D</button></a>
+                  <a href=\"formEdit.php?id=$row[0]\"><button class='btnEdit'></button></a>
+                  <a href=\"delete.php?id=$row[0]\"><button  class='btnDelete'></button></a>
                   
               </td>
           </tr> 
@@ -77,6 +77,35 @@ function printCompletedOrders($order)
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      .btnEdit{
+        background-color: white !important;
+        background-image:url(../cart/changes.png);
+        background-size:cover;
+        color: aliceblue !important;
+        border:none !important;
+        height: 25px !important;
+        width: 25px !important;
+      }
+      .btnDelete{
+        background-color: white !important;
+        background-image:url(../cart/bin.png);
+        background-size:cover;
+        color: aliceblue !important;
+        border:none !important;
+        height: 25px !important;
+        width: 25px !important;
+      }
+      .btnEdit:hover{
+        background-color:green !important;
+        border-radius:5px !important;
+      }
+      .btnDelete:hover{
+        background-color:red !important;
+        border-radius:5px !important;
+      }
+    </style>
+
   </head>
   <body>
     <div class="d-flex flex-row w-100 h-100">
