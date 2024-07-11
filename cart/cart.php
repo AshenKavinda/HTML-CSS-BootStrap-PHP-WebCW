@@ -11,8 +11,8 @@ session_start();
 </head>
 <body>
     <div class="container mt-5 p-4">
-        <div class="mb5">
-            <a href="../displayItems/productCard.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>        
+        <div class="mb5 d-flex flex-row gap-4 m-3">
+            <a href="../displayItems/productCard.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4 mt-2"><</button></a>        
             <h1>Shopping Cart</h1>
         </div>
         <?php if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])): ?>
@@ -64,10 +64,10 @@ session_start();
                         $total += $item['price'] * $item['quantity'];
                     }
                 ?>
-                <div class="d-flex flex-row gap-4">
-                    <h2>Total = <?= $total ?></h2>
+                <div class="d-flex flex-row gap-4 aligns-items-center px-5">
+                    <h2 class="head">Total = <?php echo "Rs.".$total.".00" ?></h2>
                     <input type="hidden" name="total" value="<?php echo $total; ?>">
-                    <button type="submit" class="btn btn-primary">Place Order</button>
+                    <button type="submit" class="btn btn-primary ms-auto">Place Order</button>
                 </div>     
             </form>
 
