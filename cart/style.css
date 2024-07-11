@@ -42,7 +42,7 @@ thead {
 }
 
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(choc3.jpeg.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(2024-feb-newsletter-is-dark-chocolate-good-for-your-heart.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100% !important;
@@ -79,6 +79,33 @@ h2{
 .btn-primary:hover{
     background-color: #322C2B;
     color: white;
+}
+
+.btnUpdate{
+    background-image: url(changes.png);
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btnDelete{
+    background-image: url(bin.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnUpdate:hover{
+    background-color: darkgreen;
+}
+
+.btnDelete:hover{
+    background-color: red;
 }
 
 
