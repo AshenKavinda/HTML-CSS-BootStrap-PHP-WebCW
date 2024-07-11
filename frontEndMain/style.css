@@ -142,7 +142,7 @@ html ::-webkit-scrollbar{
     font-family: 'Roboto', sans-serif; 
     font-weight: 800; 
     font-size: 5vw;
-    background-image: url(./Images/lpl.webp);
+    background-image: url(./Images/textMask.jpg);
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -190,7 +190,6 @@ html ::-webkit-scrollbar{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     background-image: url(./Images/white.jpg);
     
 }
@@ -221,7 +220,8 @@ html ::-webkit-scrollbar{
 #contact {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/topview.jpg);
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/topView.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 88%;
