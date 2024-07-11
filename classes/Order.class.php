@@ -36,6 +36,8 @@ class Order {
             if ($result) {
                 $this->cOID++ ;
                 return $id;
+            }else {
+                return false;
             }
         } catch (\Throwable $th) {
             return false ;
@@ -48,6 +50,9 @@ class Order {
             $result = mysqli_query($this->conn,$quary);
             if ($result) {
                 return true ;
+            }
+            else {
+                return false;
             }
         } catch (\Throwable $th) {
             return false ;

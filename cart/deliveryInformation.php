@@ -21,7 +21,7 @@ session_start();
             <?php endif; ?>    
 
         </div>
-        <form id="orderForm" action="" method="post">
+        <form id="orderForm" action="addOrder.php" method="post">
             <div class="mx-5 px-5 my-5 py-5 d-flex flex-column gap-4">
                 <div>
                     <label for="name" class="form-label">Name</label>
@@ -45,7 +45,6 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.getElementById('orderForm').addEventListener('submit', function(event) {
-        // Prevent the form from submitting
         event.preventDefault();
 
         const name = document.getElementById('name');
@@ -68,7 +67,7 @@ session_start();
             return false;
         }
 
-        // If all fields are valid, submit the form
+        this.removeEventListener('submit', arguments.callee);
         this.submit();
     });
     </script>
