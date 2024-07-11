@@ -37,7 +37,7 @@
                     Quantity <input type='number' id='quantity' name = '' value= '1' style='width:35px; border:none; border-radius:5px;'>
                   </div>
                 </div>
-                <a href='#' class='btn btn-primary' <?php echo $stock == 0 ? 'disabled' : ''; ?> > Add to Cart</a>
+                <a href='#' class='btn btn-primary ".($stock == 0 ? 'disabled' : '')."' > Add to Cart</a>
                 </div>
             </div>
           </div>
