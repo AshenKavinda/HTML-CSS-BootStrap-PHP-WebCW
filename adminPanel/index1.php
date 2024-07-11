@@ -17,7 +17,7 @@ function printProductTable($product)
               <td>$row[3]</td>
               <td>$row[4]</td>
               <td>
-                  <a href=\"edit.php?id=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">E</button></a>
+                  <a href=\"formEdit.php?id=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">E</button></a>
                   <a href=\"delete.php?id=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">D</button></a>
                   
               </td>
@@ -58,7 +58,7 @@ function printCompletedOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]?complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
                     <a href=\"moveToPending.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Undo</button></a>
                 </td>
             </tr> 
@@ -116,7 +116,7 @@ function printCompletedOrders($order)
           <?php if (!isset($_GET["panel"])) : ?>
             <div class="d-flex flex-column w-100 h-100">
                 <div class="mb-4">
-                    <button class="btn btn-primary px-4"><a href="add.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                    <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
                 </div>
                 <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                     <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
@@ -146,7 +146,7 @@ function printCompletedOrders($order)
             <?php if ($_GET["panel"]==1) : ?>
               <div class="d-flex flex-column w-100 h-100">
                   <div class="mb-4">
-                      <button class="btn btn-primary px-4"><a href="add.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                      <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
                   </div>
                   <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                       <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
@@ -246,7 +246,7 @@ function printCompletedOrders($order)
         midpanel.innerHTML = `
         <div class="d-flex flex-column w-100 h-100">
             <div class="mb-4">
-                <button class="btn btn-primary px-4"><a href="add.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
             </div>
             <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                 <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
