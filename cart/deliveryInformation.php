@@ -36,6 +36,7 @@ session_start();
                     <input type="text" id="phone" name="phone" class="form-control">
                 </div>
                 <div class="mt-5 w-100">
+                    <input type="hidden" name="total" value="<?=$_POST['total']?>">
                     <button style="float: right;" type="submit" class="btn btn-primary">Place Order</button>
                 </div>
             </div>

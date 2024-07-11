@@ -10,16 +10,28 @@
   function printAll($resdata)
   {
     while ($row = mysqli_fetch_array($resdata)) {
-
+      $id = $row[0];
       $image= $row[4] ;
       $name = $row[1] ;
       $price = $row[2] ;
       $stock = $row[3] ;
       $av = $stock == 1 ? "Available" : "Out of Stock"; 
+      /*
+      <form method="post" action="add_to_cart.php">
+        <input type="hidden" name="item_id" value="2"> ok
+        <input type="hidden" name="item_name" value="Sample Item 2"> ok
+        <input type="hidden" name="item_price" value="20.00"> ok
+        Quantity: <input type="number" name="item_quantity" value="1" min="1">
+        <button type="submit" name="add_to_cart">Add to Cart</button>
+      </form>*/
 
       echo "
-            
+
       <div class='col-md-3'>
+        <form method=\"post\" action=\"../cart/add_to_cart.php\">
+          <input type=hidden name='item_id' value='$id'> 
+          <input type='hidden'name='item_name' value='$name'>
+          <input type='hidden' name='item_price' value='$price'>
           <div class='m-2'>
             <div class='card shadow card-bg '>
               <img class='card-img-top' src=../adminPanel/pImg/$image >
@@ -34,15 +46,15 @@
 
                 <div class='w-100 d-flex justify-content-end' >
                   <div style='badge'>
-                    Quantity <input type='number' id='quantity' name = '' value= '1' style='width:35px; border:none; border-radius:5px;'>
+                    Quantity <input type='number' id='quantity' name = 'item_quantity' value='1' min='1' style='width:35px; border:none; border-radius:5px;'>
                   </div>
                 </div>
-                <a href='#' class='btn btn-primary ".($stock == 0 ? 'disabled' : '')."' > Add to Cart</a>
+                <button class='btn btn-primary ".($stock == 0 ? 'disabled' : '')."' type='submit' name='add_to_cart'>Add to Cart</button>
                 </div>
             </div>
           </div>
-      </div>
-          
+        </form>
+      </div>   
       ";
     }
   }

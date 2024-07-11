@@ -58,7 +58,7 @@ function printCompletedOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]?complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
                     <a href=\"moveToPending.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Undo</button></a>
                 </td>
             </tr> 

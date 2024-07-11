@@ -4,10 +4,10 @@ require_once("../classes/Order.class.php");
 $order = new Order ;
 
 
-$total = 200 ;
-$name = "kavinda";
-$address = "matara";
-$pNo = 4445456;
+$total = $_POST['total'] ;
+$name = $_POST['name'];
+$address = $_POST['address'];
+$pNo = $_POST['phone'];
 
 $oid = $order->addOrder($total,$name,$address,$pNo);
 if ($oid != null) {
@@ -22,7 +22,7 @@ if ($oid != null) {
             if ($result) {
                 unset($_SESSION['cart']);
             }
-            header("location: cart.php");
+            header("location: ../displayItems/productCard.php");
         }   
     }  
 }
