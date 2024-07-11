@@ -67,6 +67,7 @@
     <link rel="shortcut icon" type="x-icon" href="./Images/icon2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocolaté</title>
+    
     <link rel="stylesheet" href="style.css">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -77,12 +78,12 @@
     
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"> icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-TfGbD8Hmq3k4EZJc+YnCRxW4TepLQ0R9JZJKw8cyOsy/7UTBz5X1oBqHBBa/NKoo5reuhHkZnF1w5PmZ8EoH5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
 
 </head>
 <body>
     
-    <div class="all-content">
+    
 
         <!-- nav-->
 
@@ -141,7 +142,7 @@
 
           <section id="about">
             <div class="container">
-              <div class="heading">About <span>Us</span></div>
+              <div class="headingAbout">About <span>Us</span></div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="card">
@@ -177,23 +178,30 @@
           <!-- best sellers-->
 
           <section id="bestSelling">
-            <div>
-                <?php
 
-                  printAll( $result);
+            <div class="container p-5">
 
-                ?>
-            </div>  
+                <div class="headBest">Best<span> Sellers</span></div>
+
+                <div class="row">
+
+                    <?php
+
+                     printAll($result);
+
+                    ?>
+
+                </div>  
+
+            </div>
 
           </section>
-
-          
 
           <!-- best sellers-->
 
           <!-- gallery-->
 
-          <section id="gallery" class="w-100 h-100 ">
+        <section id="gallery" class="w-100 h-100 ">
             <div class="container p-5" id="gallC">
 
               <div class="headingG"><span>Gallery </span></div>
@@ -244,14 +252,14 @@
 
             </div>
 
-          </section> 
+        </section> 
 
-          <!-- gallery-->
+        <!-- gallery-->
 
-          <!-- contact us-->
+        <!-- contact us-->
 
-          <section id="contact">
-            <div class="container">
+        <section id="contact">
+            <div class="container p-5">
                 <form class="formC" action="https://api.web3forms.com/submit" method="POST">
                     <h3>Contact Us</h3>
                     <input type="hidden" name="access_key" value="598608aa-c0bb-4861-b9bb-d8215d4cd640">
@@ -264,8 +272,45 @@
             </div>
         </section>
         
-          <!-- contact us-->
-    </div>
+        <!-- contact us-->
+
+        <!-- footer-->
+        <section id="footerr position-absolute">       
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Chocolaté</h4>
+                                <p>A place where taste meets art.</p>
+                                <p>Follow us:</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Quick Links</h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="#main">Home</a></li>
+                                    <li><a href="#about">About Us</a></li>
+                                    <li><a href="#gallery">Gallery</a></li>
+                                    <li><a href="#contact">Contact Us</a></li>
+                                </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Contact Information</h4>
+                            <p>123 Chocolate Street, City, Country</p>
+                            <p>Email: info@chocolate.com</p>
+                            <p>Phone: +123 456 7890</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- footer-->
+
+    
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
