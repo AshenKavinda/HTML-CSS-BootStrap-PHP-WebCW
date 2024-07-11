@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['valied'])) {
+  header("location: ../signIn/signIn.php?ttt");
+  exit();
+}
 require_once("../classes/product.class.php");
 require_once("../classes/Order.class.php");
 $product = new product ;
@@ -83,7 +87,7 @@ function printCompletedOrders($order)
       <div class="leftPanel">
         <div class="leftPanelContent w-100 h-100 overflow-hidden position-relative">
             <div class="w-100 position-absolute py-3 bottom-0" style="height: 80%;">
-              <div class="w-100 h-100">
+              <div class="w-100 overflow-hidden position-relative" style="height: 100%;">
                 <div class="btnLink" style="cursor: pointer;" onclick="itemSection()">
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
                     <span>Products</span>
@@ -100,6 +104,12 @@ function printCompletedOrders($order)
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
                     <span>completed Orders</span>
                   </div>
+                </div>
+
+                <div class="d-flex flex-column justify-content-end w-100 object-fit-cover position-absolute bottom-0" style="max-height: 100%;">
+                  <form action="../signIn/logOut.php" method="post">
+                    <button type="submit">log-out</button>
+                  </form>
                 </div>
                 
               </div>
