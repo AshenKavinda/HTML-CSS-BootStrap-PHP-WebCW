@@ -129,7 +129,7 @@ class Order {
 
     public function getBestSellingProduct() {
         try {
-            $quary = "SELECT p.code, p.name, p.price, p.stock FROM ( SELECT PID, COUNT(PID) AS PID_Count FROM oderproduct GROUP BY PID ORDER BY PID_Count DESC LIMIT 3 ) AS op JOIN product AS p ON op.PID = p.code";
+            $quary = "SELECT p.name, p.price, p.stock,p.image FROM ( SELECT PID, COUNT(PID) AS PID_Count FROM oderproduct GROUP BY PID ORDER BY PID_Count DESC LIMIT 3 ) AS op JOIN product AS p ON op.PID = p.code";
             $result = mysqli_query($this->conn,$quary);
             if ($result) {
                 return $result;

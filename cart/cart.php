@@ -39,14 +39,14 @@ session_start();
                                     <td><?php echo $item['price'] * $item['quantity']; ?></td>
                                     <td class="w-100 d-flex flex-row gap-1 justify-content-center"> 
                                         <div>
-                                            <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="update_quantity" style="background-color: green;">U</button>
+                                            <input type="hidden" name="item_index" value="<?php echo $index; ?>">                                    
+                                            <button class="btnUpdate" type="submit" name="update_quantity"></button>
                                             </form>
                                         </div>
                                         
                                         <form method="post" action="remove_from_cart.php">
                                             <input type="hidden" name="item_index" value="<?php echo $index; ?>">
-                                            <button type="submit" name="remove_item" style="background-color: red;">R</button>
+                                            <button class="btnDelete" type="submit" name="remove_item"></button>
                                         </form>
                                     </td>
                                 </tr>
