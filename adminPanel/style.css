@@ -135,3 +135,41 @@ h1{
 .btnDelete:hover{
     background-color: red;
 }
+
+.btnView{
+    background-image: url(view.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnDone{
+    background-image: url(check-mark.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnView:hover{
+    background-color: gray;
+}
+.btnDone:hover{
+    background-color: green;
+}
+
+.btnUndo{
+    background-image: url(undo.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnUndo:hover{
+    background-color: gray;
+}

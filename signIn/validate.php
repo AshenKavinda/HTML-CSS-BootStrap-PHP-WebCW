@@ -9,11 +9,11 @@ if (isset($_POST['username'])) {
 
     $result = $signIn->isValied($username,$password);
     if ($result) {
-        $_SESSION['valied'] = true;
+        $_SESSION['valid'] = true;
         header("location: ../adminPanel/index1.php");
     }
     else {
-        header("location: signIn.php?invalied");
+        header("location: signIn.php?invalid");
     }
 }
 ?>

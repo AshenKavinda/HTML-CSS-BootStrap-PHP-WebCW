@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['valid'])) {
+  header("location: ../signIn/signIn.php");
+  exit();
+}
 require_once("../classes/product.class.php");
 require_once("../classes/Order.class.php");
 $product = new product ;
@@ -38,8 +43,8 @@ function printPendingOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
-                    <a href=\"moveToComplete.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Done</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]\"><button class='btnView' ></button></a>
+                    <a href=\"moveToComplete.php?oid=$row[0]\"><button class='btnDone'></button></a>
                 </td>
             </tr> 
             ";
@@ -58,8 +63,8 @@ function printCompletedOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
-                    <a href=\"moveToPending.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Undo</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button class='btnView'></button></a>
+                    <a href=\"moveToPending.php?oid=$row[0]\"><button class='btnUndo'></button></a>
                 </td>
             </tr> 
             ";
@@ -263,7 +268,7 @@ function printCompletedOrders($order)
         midpanel.innerHTML = `
         <div class="d-flex flex-column w-100 h-100">
             <div class="mb-4">
-                <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                <a href="formAdd.php" style="text-decoration:none; color:black;"><button class="btn btn-add px-4">Add New</button></a>
             </div>
             <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                 <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
