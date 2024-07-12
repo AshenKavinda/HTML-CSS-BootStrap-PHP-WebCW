@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!doctype html>
@@ -10,34 +9,42 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-        <div class="mt-5">
-            <a href="cart.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>        
-            <h1>Dilivery Information</h1>
-            <?php if(isset($_POST['total'])): ?>
-                <h3>Total : <?=$_POST['total']?></h3>
-            <?php endif; ?>    
-
+        <div class="mt-5 d-flex flex-row gap-4 m-3">
+            <a href="cart.php" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4 mt-2"><</button></a>        
+            <h1>Delivery Information</h1>
+        </div>
+            
         </div>
         <form id="orderForm" action="addOrder.php" method="post">
-            <div class="mx-5 px-5 my-5 py-5 d-flex flex-column gap-4">
+            <div class=" my-4 d-flex flex-column gap-4 w-100 h-100 align-items-center">
                 <div>
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" name="name" class="form-control">
+                    <label for="name" class="formlabel" style="color:white;">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" style="width:600px;">
                 </div> 
                 <div>
-                    <label for="address" class="form-label">Address</label>
-                    <textarea style="height: 10vh;" id="address" name="address" class="form-control"></textarea>
+                    <label for="address" class="form-label" style="color:white;">Address</label>
+                    <textarea style="height: 10vh; width:600px;" id="address" name="address" class="form-control"></textarea>
                 </div>
                 <div>
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="text" id="phone" name="phone" class="form-control">
+                    <label for="phone" class="form-label" style="color:white;">Phone Number</label>
+                    <input type="text" id="phone" name="phone" class="form-control" style="width:600px;">
                 </div>
-                <div class="mt-5 w-100">
+                <div class="container mt-5 w-100 mx-5">
                     <input type="hidden" name="total" value="<?=$_POST['total']?>">
-                    <button style="float: right;" type="submit" class="btn btn-primary">Place Order</button>
+                    <div class= "mx-5 d-flex" style="gap:240px;"> 
+                        <div>  
+                        <?php if(isset($_POST['total'])): ?>
+                            <h3 style="color:white; margin-left:210px; background-color:#3a170d; border-radius:5px; width:250px; height:35px;    align-items: center;display: flex;justify-content: center;">Total : Rs. <?=$_POST['total']?>.00</h3>
+                        <?php endif; ?> 
+                        </div>    
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-primary">Place Order</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

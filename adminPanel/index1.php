@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['valied'])) {
+  header("location: ../signIn/signIn.php?ttt");
+  exit();
+}
 require_once("../classes/product.class.php");
 require_once("../classes/Order.class.php");
 $product = new product ;
@@ -17,8 +21,8 @@ function printProductTable($product)
               <td>$row[3]</td>
               <td>$row[4]</td>
               <td>
-                  <a href=\"formEdit.php?id=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">E</button></a>
-                  <a href=\"delete.php?id=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">D</button></a>
+                  <a href=\"formEdit.php?id=$row[0]\"><button class='btnEdit'></button></a>
+                  <a href=\"delete.php?id=$row[0]\"><button  class='btnDelete'></button></a>
                   
               </td>
           </tr> 
@@ -38,7 +42,7 @@ function printPendingOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]\"><button style=\"background-color: green;color: aliceblue;\">View</button></a>
                     <a href=\"moveToComplete.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Done</button></a>
                 </td>
             </tr> 
@@ -77,13 +81,42 @@ function printCompletedOrders($order)
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      .btnEdit{
+        background-color: white !important;
+        background-image:url(../cart/changes.png);
+        background-size:cover;
+        color: aliceblue !important;
+        border:none !important;
+        height: 25px !important;
+        width: 25px !important;
+      }
+      .btnDelete{
+        background-color: white !important;
+        background-image:url(../cart/bin.png);
+        background-size:cover;
+        color: aliceblue !important;
+        border:none !important;
+        height: 25px !important;
+        width: 25px !important;
+      }
+      .btnEdit:hover{
+        background-color:green !important;
+        border-radius:5px !important;
+      }
+      .btnDelete:hover{
+        background-color:red !important;
+        border-radius:5px !important;
+      }
+    </style>
+
   </head>
   <body>
     <div class="d-flex flex-row w-100 h-100">
       <div class="leftPanel">
         <div class="leftPanelContent w-100 h-100 overflow-hidden position-relative">
             <div class="w-100 position-absolute py-3 bottom-0" style="height: 80%;">
-              <div class="w-100 h-100">
+              <div class="w-100 overflow-hidden position-relative" style="height: 100%;">
                 <div class="btnLink" style="cursor: pointer;" onclick="itemSection()">
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
                     <span>Products</span>
@@ -100,6 +133,12 @@ function printCompletedOrders($order)
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
                     <span>completed Orders</span>
                   </div>
+                </div>
+
+                <div class="d-flex flex-column justify-content-end w-100 object-fit-cover position-absolute bottom-0" style="max-height: 100%;">
+                  <form action="../signIn/logOut.php" method="post">
+                    <button type="submit">log-out</button>
+                  </form>
                 </div>
                 
               </div>
