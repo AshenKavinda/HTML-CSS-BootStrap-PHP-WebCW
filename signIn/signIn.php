@@ -31,6 +31,11 @@
         color:#3a170d;
         font-weight: 700;
     }
+    .img{
+        width:100px;
+        height: 80px;
+        border-radius:40px;
+    }
 
     </style>
 </head>
@@ -43,8 +48,9 @@
         <form class="" action="validate.php" method="post">
             
             <div class="d-flex flex-column align-content-center justify-content-center gap-2">
+             <div class="d-flex justify-content-center"><img class="img" src="../displayItems/d5d36493419c82448c9529fc57adae25.jpg" alt=""></div>   
 
-            <div class="text-center w-100" style="font-size: 4vw;font-weight: 700;">Welcome!</div>
+            <div class="text-center w-100" style="font-size: 3vw;font-weight: 500;">Welcome!</div>
 
             <div class="row">
                 <label for="inputEmail3" class="col-form-label">Username</label>
