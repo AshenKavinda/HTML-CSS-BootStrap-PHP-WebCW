@@ -16,14 +16,6 @@
       $price = $row[2] ;
       $stock = $row[3] ;
       $av = $stock == 1 ? "Available" : "Out of Stock"; 
-      /*
-      <form method="post" action="add_to_cart.php">
-        <input type="hidden" name="item_id" value="2"> ok
-        <input type="hidden" name="item_name" value="Sample Item 2"> ok
-        <input type="hidden" name="item_price" value="20.00"> ok
-        Quantity: <input type="number" name="item_quantity" value="1" min="1">
-        <button type="submit" name="add_to_cart">Add to Cart</button>
-      </form>*/
 
       echo "
 
@@ -140,18 +132,18 @@
           <!-- About -->
 
           <section id="about">
-            <div class="container">
+            <div class="container w-100 h-100 d-flex flex-column align-content-center justify-content-center position-relative overflow-hidden">
               <div class="headingAbout">About <span>Us</span></div>
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 h-100">
                   <div class="card">
-                    <img src="./Images/About.jpg" alt="Chocolaté">
+                    <img class="" src="./Images/About.jpg" alt="Chocolaté">
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 position-relative overflow-hidden object-fit-cover" style="max-height: 100%;">
                   <h3 class="text" >WHAT MAKES OUR CHOCOLATE SPECIAL</a></h3><br>
-                  <p style="text-align: justify;">Premium Ingredients: We source the finest cocoa beans from sustainable farms around the world.
+                  <p style="text-align: justify;font-size: 1vw;">Premium Ingredients: We source the finest cocoa beans from sustainable farms around the world.
                      Our commitment to quality ensures that every piece of chocolate is made from the best raw materials, free from artificial additives and preservatives.
 
                     Artisanal Craftsmanship: Each piece of our chocolate is handcrafted by skilled artisans who pour their expertise and passion into every creation.
@@ -160,9 +152,7 @@
                     Customer Satisfaction: Your satisfaction is our top priority. We take pride in our customer service, ensuring that every experience
                      with Chocolate is as delightful as our confections. Whether you're visiting our shop or ordering online, we strive to make your chocolate journey exceptional.</p><br><br>
 
-                     <h3 class="chocoAboutUs">Chocolaté</h3>
-
-                     
+                     <h3 class="chocoAboutUs" style="font-size:4vw;">Chocolaté</h3>    
                 </div>
 
 
@@ -206,8 +196,8 @@
 
           <!-- gallery-->
 
-        <section id="gallery" class="w-100 h-100 ">
-            <div class="container p-5" id="gallC">
+        <section id="gallery" class="w-100">
+            <div class="container w-100 h-100 d-flex flex-column align-items-center justify-content-center p-5" id="gallC">
 
               <div class="headingG"><span>Gallery </span></div>
   

@@ -252,12 +252,9 @@ function printCompletedOrders($order)
             </div>
           </div>
         </div>
-      </div>        
-
+      </div>  
 
     </div>
-              
-              
               
               
 
