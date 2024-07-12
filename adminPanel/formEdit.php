@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['valid'])) {
+  header("location: ../signIn/signIn.php");
+  exit();
+}
 require_once("../classes/product.class.php");
 $product = new product ;
 $recordSuccess = 0 ;
@@ -60,7 +64,7 @@ if (isset($_POST['btnEdit'])) {
       <div class="container w-100 h-100">
         
         <div class="">
-            <button class="btn btn-primary px-4"><a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;">Back</a></button>
+            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>
             <h1>EDIT ITEM</h1>
         </div>
         

@@ -20,7 +20,7 @@
       echo "
 
       <div class='col-md-3'>
-        <form method=\"post\" action=\"../cart/add_to_cart.php\">
+        <form method=\"post\" action=\"../cart/addToCart.php\">
           <input type=hidden name='item_id' value='$id'> 
           <input type='hidden'name='item_name' value='$name'>
           <input type='hidden' name='item_price' value='$price'>
