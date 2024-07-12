@@ -33,52 +33,55 @@ function printAllProduct($productTable) {
   </head>
   <body style="overflow: scroll;">
     <div class="container mt-5 p-5 w-100 ">
-      <?php if(isset($_GET['complete'])) : ?>
-        <a href="index1.php?panel=3" style="text-decoration: none; color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a> 
-      
-      <?php else : ?>
-        <a href="index1.php?panel=2" style="text-decoration: none; color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a> 
+      <div class="d-flex gap-4">
+        <div>
+          <?php if(isset($_GET['complete'])) : ?>
+            <a href="index1.php?panel=3" style="text-decoration: none; color:aliceblue;"><button class="btn btn-primary px-4"><</button></a> 
+          
+          <?php else : ?>
+            <a href="index1.php?panel=2" style="text-decoration: none; color:aliceblue;"><button class="btn btn-primary px-4"><</button></a> 
 
-      <?php endif ; ?>
-
-      <div class="d-flex flex-column">
-        <h1>Order Details</h1>
+          <?php endif ; ?>
+        </div>
+        <div class="d-flex flex-column">
+          <h1>Order Details</h1>
+        </div>
       </div>
-      <div class="d-flex flex-column w-100 p-5" style="font-size: 1.5vw;">
+      <div class="topCard d-flex flex-column w-100 mx-5 p-4" style="font-size: 1.5vw;">
         <div class="d-flex flex-row w-100 gap-5">
           <div class="d-flex flex-column">
             <div>
-              <label for="" >Order ID : </label>
-              <label for="" ><?=$orderRow[0] ?></label>
+              <label class="lableDetails" for="" >✦ Order ID : </label>
+              <label class="lableDetails" for="" ><?=$orderRow[0] ?></label>
             </div>
             <div>
-              <label for="" >Price : </label>
-              <label for="" ><?=$orderRow[1] ?></label>
+              <label class="lableDetails" for="" >✦ Price &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </label>
+              <label class="lableDetails" for="" >Rs.<?=$orderRow[1] ?>.00</label>
             </div>
             <div>
-              <label for="" >Date : </label>
-              <label for="" ><?=$orderRow[2] ?></label>
+              <label class="lableDetails" for="" >✦ Date &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </label>
+              <label class="lableDetails" for="" ><?=$orderRow[2] ?></label>
             </div>
 
           </div>
-          <div>
+          <div class="justify-content-end">
             <div>
-              <label for="" >Customer Name :</label>
-              <label for="" ><?=$orderRow[3] ?></label>
+              <label class="lableDetails" for="" >✦ Customer Name :</label>
+              <label class="lableDetails" for="" ><?=$orderRow[3] ?></label>
             </div>
             <div>
-              <label for="" >Phone No :</label>
-              <label for="" ><?=$orderRow[5] ?></label>
+              <label class="lableDetails" for="" >✦ Phone No &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+              <label class="lableDetails" for="" ><?=$orderRow[5] ?></label>
             </div>
             <div class="d-flex flex-row">
-              <label for="" >Address :</label>
-              <p  style="width: 30vw;"><?=$orderRow[4] ?></p>
+              <label class="lableDetails" for="" >✦ Address &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:</label>
+              <p class="lableDetails" style="width: 30vw;">&nbsp<?=$orderRow[4] ?></p>
             </div>
           </div>
           
         </div>
       </div>
-      <div class="w-100 h-100 d-flex flex-column align-items-center position-relative overflow-hidden">
+      <div class="w-100 mt-4 h-100 d-flex flex-column align-items-center position-relative overflow-hidden">
         <div class="w-75" style="max-height: 100%;object-fit: cover;">
             <div class="table-container">
                 <table class="table bg-light position-relative w-100 mb-5">

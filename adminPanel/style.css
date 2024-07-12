@@ -173,3 +173,22 @@ h1{
 .btnUndo:hover{
     background-color: gray;
 }
+
+.btn-primary{
+    background-color: white;
+    color: black;
+    border:none;
+}
+.btn-primary:hover{
+    background-color:#322C2B;
+    color: white;
+}
+
+.topCard{
+    background-color: rgba(5, 5, 5, 0.8);
+    border-radius: 10px;
+}
+
+.lableDetails{
+    color: white;
+}
