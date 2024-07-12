@@ -1,7 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['valied'])) {
-  header("location: ../signIn/signIn.php?ttt");
+
+if(!isset($_SESSION['valid'])) {
+  header("location: ../signIn/signIn.php");
   exit();
 }
 require_once("../classes/product.class.php");
@@ -21,8 +22,8 @@ function printProductTable($product)
               <td>$row[3]</td>
               <td>$row[4]</td>
               <td>
-                  <a href=\"formEdit.php?id=$row[0]\"><button class='btnEdit'></button></a>
-                  <a href=\"delete.php?id=$row[0]\"><button  class='btnDelete'></button></a>
+                  <a href=\"formEdit.php?id=$row[0]\"><button class='btnUpdate'></button></a>
+                  <a href=\"delete.php?id=$row[0]\"><button class='btnDelete' ></button></a>
                   
               </td>
           </tr> 
@@ -42,8 +43,8 @@ function printPendingOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]\"><button style=\"background-color: green;color: aliceblue;\">View</button></a>
-                    <a href=\"moveToComplete.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Done</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]\"><button class='btnView' ></button></a>
+                    <a href=\"moveToComplete.php?oid=$row[0]\"><button class='btnDone'></button></a>
                 </td>
             </tr> 
             ";
@@ -62,8 +63,8 @@ function printCompletedOrders($order)
                 <td>$row[2]</td>
                 <td>$row[1]</td>
                 <td>
-                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button href style=\"background-color: green;color: aliceblue;\">View</button></a>
-                    <a href=\"moveToPending.php?oid=$row[0]\"><button style=\"background-color: rgb(128, 0, 0);color: aliceblue;\">Undo</button></a>
+                    <a href=\"viewOrder.php?oid=$row[0]&complete\"><button class='btnView'></button></a>
+                    <a href=\"moveToPending.php?oid=$row[0]\"><button class='btnUndo'></button></a>
                 </td>
             </tr> 
             ";
@@ -81,42 +82,13 @@ function printCompletedOrders($order)
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <style>
-      .btnEdit{
-        background-color: white !important;
-        background-image:url(../cart/changes.png);
-        background-size:cover;
-        color: aliceblue !important;
-        border:none !important;
-        height: 25px !important;
-        width: 25px !important;
-      }
-      .btnDelete{
-        background-color: white !important;
-        background-image:url(../cart/bin.png);
-        background-size:cover;
-        color: aliceblue !important;
-        border:none !important;
-        height: 25px !important;
-        width: 25px !important;
-      }
-      .btnEdit:hover{
-        background-color:green !important;
-        border-radius:5px !important;
-      }
-      .btnDelete:hover{
-        background-color:red !important;
-        border-radius:5px !important;
-      }
-    </style>
-
   </head>
   <body>
     <div class="d-flex flex-row w-100 h-100">
       <div class="leftPanel">
         <div class="leftPanelContent w-100 h-100 overflow-hidden position-relative">
             <div class="w-100 position-absolute py-3 bottom-0" style="height: 80%;">
-              <div class="w-100 overflow-hidden position-relative" style="height: 100%;">
+              <div class="w-100 h-100">
                 <div class="btnLink" style="cursor: pointer;" onclick="itemSection()">
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
                     <span>Products</span>
@@ -135,11 +107,13 @@ function printCompletedOrders($order)
                   </div>
                 </div>
 
+
                 <div class="d-flex flex-column justify-content-end w-100 object-fit-cover position-absolute bottom-0" style="max-height: 100%;">
                   <form action="../signIn/logOut.php" method="post">
-                    <button type="submit">log-out</button>
+                    <button class="logout" type="submit"></button>
                   </form>
                 </div>
+
                 
               </div>
 
@@ -150,12 +124,12 @@ function printCompletedOrders($order)
 
       <div class="midPanel p-3" style="padding-left: 0 !important;">
         
-        <div class="w-100 h-100 p-5" id="midPanel" style="border-radius: 0 2rem 2rem 0; background-color: #C7C7C7;">
+        <div class="w-100 h-100 p-5" id="midPanel" style="border-radius: 0 2rem 2rem 0; background-color: rgba(185,185,185,0.6);">
           
           <?php if (!isset($_GET["panel"])) : ?>
             <div class="d-flex flex-column w-100 h-100">
                 <div class="mb-4">
-                    <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                    <a href="formAdd.php" style="text-decoration:none; color:black;"><button class="btn btn-add px-4">Add New</button></a>
                 </div>
                 <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                     <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
@@ -270,13 +244,22 @@ function printCompletedOrders($order)
       </div>
 
       <div class="headPanel p-3">
-        <div class="w-100 h-100" style="border-radius: 2rem; background-color: #C7C7C7;">
-
+        <div class="w-100 h-100" style="border-radius: 2rem; background-color: #1a2127 ;">
+          <div class="w-100 h-100 d-flex flex-column justify-content-center mx-3">
+            <div class='d-flex gap-3'>
+              <img class="image" src="../displayItems/d5d36493419c82448c9529fc57adae25.jpg" alt="">
+              <h1>Chocolaté</h1>
+            </div>
+          </div>
         </div>
+      </div>        
 
-      </div>
 
     </div>
+              
+              
+              
+              
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
@@ -285,7 +268,7 @@ function printCompletedOrders($order)
         midpanel.innerHTML = `
         <div class="d-flex flex-column w-100 h-100">
             <div class="mb-4">
-                <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                <a href="formAdd.php" style="text-decoration:none; color:black;"><button class="btn btn-add px-4">Add New</button></a>
             </div>
             <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                 <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">

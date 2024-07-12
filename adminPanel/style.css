@@ -1,14 +1,15 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #E2E2E2;
+    background-image: url(../cart/choc3.jpeg.jpg);
+    background-size: cover;
     overflow: hidden;
 }
 
 .leftPanel {
     width: 20%;
     height: 100%;
-    background-color: blueviolet;
+    background-color: #3a170d;
 }
 
 .midPanel {
@@ -59,30 +60,116 @@ thead {
     border-top: 1px solid #dee2e6;
 }
 
-/**/
 
 .btnLink {
     width: 100%;
     height: 15%;
-    background-color: blueviolet;
+    background-color: #3a170d;
     font-size: 1.5vw;
     font-weight: 500;
     color: #dee2e6;
 }
 
 .btnLink:hover {
-    background-color: rgb(88, 16, 156);
+    background-color: #160703;
     font-size: 2vw;
     font-weight: 700;
 }
-  
-.btnEdit{
-    background-color: green !important;
-    color: aliceblue !important;
-    border:none !important;
-    height: 25px !important;
-    width: 25px !important;
-}
-.btnDelete{
 
+
+.btn-add{
+    background-color: rgb(182, 171, 171);
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-add:hover{
+    background-color: #322C2B;
+    color: white;
+}
+
+.image{
+    width: 60px;
+    height: 50px;
+}
+
+h1{
+    color: white;
+}
+
+.logout{
+    background-image: url(shutdown.png);
+    background-size: cover;
+    background-color:  #3a170d;
+    width: 40px;
+    height: 40px;
+    border: none;
+    margin-left: 20px;
+}
+
+.btnUpdate{
+    background-image: url(../cart/changes.png);
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btnDelete{
+    background-image: url(../cart/bin.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btnUpdate:hover{
+    background-color: darkgreen;
+}
+
+.btnDelete:hover{
+    background-color: red;
+}
+
+.btnView{
+    background-image: url(view.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnDone{
+    background-image: url(check-mark.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnView:hover{
+    background-color: gray;
+}
+.btnDone:hover{
+    background-color: green;
+}
+
+.btnUndo{
+    background-image: url(undo.png) ;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-size: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+.btnUndo:hover{
+    background-color: gray;
 }
