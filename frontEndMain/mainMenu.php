@@ -102,7 +102,7 @@
                     <a class="nav-link" href="#about">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="../displayItems/productCard.php">Products</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#gallery">Gallery</a>
@@ -112,9 +112,9 @@
                   </li>                       
                 </ul>
                 <form class="d-flex">
-                  <span class="input-group-text mx-2"><a><img src="./Images/shopping-cart.png"></a></span>
+                  <span class="input-group-text mx-2"><a href="../cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit" >Search</button>
                 </form>
               </div>
             </div>
@@ -132,12 +132,11 @@
                 <p>In every bite of our chocolate, discover a symphony of flavors<br>
                    crafted to perfection, a testament to our passion for sweetness.</p>
 
-                <button id="btnOrder">Place Order</button>
+               <a href="../displayItems/productCard.php"><button id="btnOrder">Place Order</button></a>
 
             </div>
           </section>
           <!-- main page-->
-
           <!-- About -->
 
           <section id="about">
@@ -177,9 +176,9 @@
 
           <!-- best sellers-->
 
-          <section id="bestSelling">
+          <section id="bestSelling" class="w-100">
 
-            <div class="container p-5">
+            <div class="container p-5 w-100">
 
                 <div class="headBest">Best<span> Sellers</span></div>
 
@@ -191,7 +190,13 @@
 
                     ?>
 
-                </div>  
+                </div> 
+                
+                <div class="text-center w-100 my-5 ">
+                    <a href="../displayItems/productCard.php" style="text-decoration: none; color: black;">For more...</a>
+                </div>
+
+                
 
             </div>
 
