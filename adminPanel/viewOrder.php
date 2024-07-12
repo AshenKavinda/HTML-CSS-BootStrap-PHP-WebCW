@@ -32,7 +32,7 @@ function printAllProduct($productTable) {
     <link rel="stylesheet" href="style.css">
   </head>
   <body style="overflow: scroll;">
-    <div class="container mt-5 p-5 w-100 ">
+    <div class="container mt-5 p-5 w-100">
       <div class="d-flex gap-4">
         <div>
           <?php if(isset($_GET['complete'])) : ?>
@@ -47,7 +47,7 @@ function printAllProduct($productTable) {
           <h1>Order Details</h1>
         </div>
       </div>
-      <div class="topCard d-flex flex-column w-100 mx-5 p-4" style="font-size: 1.5vw;">
+      <div class="topCard d-flex flex-column w-100 mt-4 mx-5 p-4" style="font-size: 1.5vw;">
         <div class="d-flex flex-row w-100 gap-5">
           <div class="d-flex flex-column">
             <div>
