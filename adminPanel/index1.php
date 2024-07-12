@@ -159,7 +159,7 @@ function printCompletedOrders($order)
             <?php if ($_GET["panel"]==1) : ?>
               <div class="d-flex flex-column w-100 h-100">
                   <div class="mb-4">
-                      <button class="btn btn-primary px-4"><a href="formAdd.php" style="text-decoration: none;color:aliceblue;">Add New</a></button>
+                    <a href="formAdd.php" style="text-decoration:none; color:black;"><button class="btn btn-add px-4">Add New</button></a>
                   </div>
                   <div class="w-100 h-100 d-flex flex-column align-items-center justify-content-center position-relative overflow-hidden">
                       <div class="w-100 h-100" style="max-height: 100%;object-fit: cover;">
@@ -252,12 +252,9 @@ function printCompletedOrders($order)
             </div>
           </div>
         </div>
-      </div>        
-
+      </div>  
 
     </div>
-              
-              
               
               
 

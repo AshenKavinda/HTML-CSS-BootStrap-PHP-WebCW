@@ -5,6 +5,10 @@
     font-family: 'Oswald', sans-serif;   
 } 
 
+body{
+    width: 100vw;
+}
+
 /*.all-content{
     background: #322C2B;
 }*/
@@ -112,6 +116,7 @@ html ::-webkit-scrollbar{
 
 
 
+
 /* about us */
 #about{
     width: 100%;
@@ -123,12 +128,7 @@ html ::-webkit-scrollbar{
     font-weight: bold;
 }
 
-
-#about .container{
-    padding-top: 70px;
-}
-
-.heading{
+.headingAbout{
     text-align: center;
     margin-bottom: 50px;
     color: #322C2B;
@@ -157,10 +157,12 @@ html ::-webkit-scrollbar{
 
 #about .card{
     border-radius: 15px;
+    height: 100%;
 }
 
 #about .card img{
     border-radius: 15px;
+    height: 100%;
 }
 
 @media screen and (max-width:982px){
@@ -184,6 +186,104 @@ html ::-webkit-scrollbar{
 
 /* best sellers */
 
+#bestSelling{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/best.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 88%;
+}
+
+
+#bestSelling .container{
+
+    padding-top: 70px;
+}
+
+.headBest{
+    text-align: center;
+    margin-bottom: 50px;
+    color:  #322C2B;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+.btn-primary{
+    background-color: #3a170d !important;  
+    width: 100% !important;
+    height: 10% !important;
+    padding: 10px !important;
+    border: none !important;
+
+    object-fit: cover !important;
+}
+
+.card-title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: 100px !important;
+    
+}
+
+.card-bg{
+    background-color:rgba(207, 207, 207, 0.7) !important;
+    border: 0px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.card-text{
+    height: 100px !important;
+}
+
+.badge-success{
+    background-color: #C3883D !important;
+    font-size: 15px !important;
+    position: absolute !important;  
+}
+
+.card-img-top{
+    border-radius: 5px !important; 
+    border-bottom: #3a170d !important; 
+    border: 5px !important; 
+    height: 175px !important;
+}
+.badge{
+    float: right;
+}
+
+.Quantity{
+    font-weight:bold !important;
+}
+
+.btn1{
+    background-color: yellow !important;
+    color: #322C2B !important;
+    width: 20px !important;
+    height: 30px !important;
+    border-radius: 5px ;
+    text-align: center;
+    font-weight: bold !important;
+    object-fit: cover;
+}
+
+.badge-available{
+    background-color: green !important;
+}
+.badge-outofstock{
+    background-color: red !important;
+}
+
+.btn-primary:hover{
+    background-color:#322C2B !important;
+}
+
+.disabled{
+    background-color: #322C2B;
+    cursor:not-allowed;
+}
+
 
 /* best sellers */
 
@@ -191,7 +291,7 @@ html ::-webkit-scrollbar{
 
 #gallery{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     background-image: url(./Images/blurBack.jpg);
     
@@ -223,7 +323,6 @@ html ::-webkit-scrollbar{
 #contact {
     width: 100%;
     height: 100vh;
-    position: absolute;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/topView.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -272,3 +371,72 @@ html ::-webkit-scrollbar{
 }
 
 /* contact us */
+
+/* footer */
+
+.container-fluid {
+    background-color: #322C2B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container-fluid h4 {
+    color: #C3883D;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container-fluid p {
+    font-size: 16px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.social-links a:hover {
+    color: #C3883D;
+}
+
+.container-fluid ul.list-unstyled {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.container-fluid ul.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.container-fluid ul.list-unstyled li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container-fluid ul.list-unstyled li a:hover {
+    color: #C3883D;
+}
+
+@media (max-width: 768px) {
+    #footerr {
+        padding: 20px 10px;
+    }
+}
+
+
+/* footer */
+
+
+
+
+
+

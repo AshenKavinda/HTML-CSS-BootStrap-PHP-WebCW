@@ -28,7 +28,7 @@
       echo "
 
       <div class='col-md-3'>
-        <form method=\"post\" action=\"../cart/add_to_cart.php\">
+        <form method=\"post\" action=\"../cart/addToCart.php\">
           <input type=hidden name='item_id' value='$id'> 
           <input type='hidden'name='item_name' value='$name'>
           <input type='hidden' name='item_price' value='$price'>
@@ -82,20 +82,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color: #F6EDCE;">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #F6EDCE;">About Us</a>
-          </li>
-          <li class="nav-item" >
-            <a class="nav-link" style="color: #F6EDCE;" href="productCard.php" id="load-content-link">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #F6EDCE;">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="color: #F6EDCE;">Contact Us</a>
-          </li>                       
+            <a class="nav-link active" aria-current="page" href="../frontEndMain/mainMenu.php" style="color: #F6EDCE;">Home</a>
+          </li>          
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
