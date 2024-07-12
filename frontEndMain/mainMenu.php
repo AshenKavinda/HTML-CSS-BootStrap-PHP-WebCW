@@ -103,11 +103,11 @@
                     <a class="nav-link" href="#contact">Contact Us</a>
                   </li>                       
                 </ul>
-                <form class="d-flex">
+
+                   <strong>Your cart - </strong>
                   <span class="input-group-text mx-2"><a href="../cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit" >Search</button>
-                </form>
+                  
+                
               </div>
             </div>
           </nav>

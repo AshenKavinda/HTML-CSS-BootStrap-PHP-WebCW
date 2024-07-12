@@ -211,7 +211,7 @@ html ::-webkit-scrollbar{
 } 
 
 body{
-    background-image: url('choc3.jpeg.jpg') !important;
+    background-image: url('choc3.jpeg') !important; 
     background-size: cover !important;
     background-repeat: no-repeat !important;
     width: 100% !important;
