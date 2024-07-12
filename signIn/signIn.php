@@ -18,15 +18,20 @@
         align-items: center;
         justify-content: center;
         position: absolute;
+        background-image:url(../frontEndMain/Images/blurBack.jpg);
+        background-size:cover;
     }
     .midPanel {
         box-shadow: -2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background-color:white;
+        border-radius:10px;
     }
     .midpanelHedder {
         font-size: 40px;
-        color: #7E30E1;
+        color:#3a170d;
         font-weight: 700;
     }
+
     </style>
 </head>
 <body>
@@ -39,7 +44,7 @@
             
             <div class="d-flex flex-column align-content-center justify-content-center gap-2">
 
-            <div class="text-center w-100" style="font-size: 4vw;color: #7E30E1;font-weight: 700;">Welcome!</div>
+            <div class="text-center w-100" style="font-size: 4vw;font-weight: 700;">Welcome!</div>
 
             <div class="row">
                 <label for="inputEmail3" class="col-form-label">Username</label>
@@ -55,7 +60,7 @@
                 <input name="password" type="password" class="form-control form-control-lg" id="inputPassword3"
                     placeholder="Password">
                 
-                <?php if(isset($_GET['invalied'])) : ?>
+                <?php if(isset($_GET['invalid'])) : ?>
                 <span class="float-start text-decoration-none fontSizeSignIn mt-2" style="color: #e13030;">
                     Invalied username or password
                 </span>
@@ -65,7 +70,7 @@
 
             <div class="mt-3">
                 <button name="SigninSubmit" type="submit" class="btn w-100 py-2 fontSizeSignIn"
-                style="background-color: #7E30E1;font-weight: 700;color: #fff;">Sign in</button>
+                style="background-color: #3a170d;font-weight: 700;color: #fff;">Sign in</button>
             </div>
 
             </div>
