@@ -30,6 +30,7 @@ html ::-webkit-scrollbar{
 
 #navbar{
     background-color:  #322C2B!important;
+    
     /* position: sticky;
     top: 0;
     z-index: 1000; */
@@ -64,6 +65,7 @@ html ::-webkit-scrollbar{
     color: white;
     border: 1px solid #803D3B;
 }
+
 
 /* nav */
 
@@ -377,7 +379,6 @@ html ::-webkit-scrollbar{
 .container-fluid {
     background-color: #322C2B;
     color: white;
-    padding: 20px;
     text-align: center;
     width: 100%;
 }
