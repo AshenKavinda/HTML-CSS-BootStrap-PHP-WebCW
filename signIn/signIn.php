@@ -18,7 +18,7 @@
         align-items: center;
         justify-content: center;
         position: absolute;
-        background-image:url(../frontEndMain/Images/blurBack.jpg);
+        background-image:url(../adminPanel/blurpro.jpg);
         background-size:cover;
     }
     .midPanel {
