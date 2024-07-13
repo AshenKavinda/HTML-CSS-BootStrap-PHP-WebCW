@@ -108,4 +108,19 @@ h2{
     background-color: red;
 }
 
+.form-label{
+    color: white;
+    font-weight: bold;
+}
+
+.h3{
+    color: white !important;
+}
+.form-control{
+    width: 500px;
+    
+}
+
+
+
 

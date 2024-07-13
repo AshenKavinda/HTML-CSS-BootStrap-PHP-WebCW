@@ -30,6 +30,7 @@ html ::-webkit-scrollbar{
 
 #navbar{
     background-color:  #322C2B!important;
+    
     /* position: sticky;
     top: 0;
     z-index: 1000; */
@@ -64,6 +65,7 @@ html ::-webkit-scrollbar{
     color: white;
     border: 1px solid #803D3B;
 }
+
 
 /* nav */
 
@@ -128,11 +130,6 @@ html ::-webkit-scrollbar{
     font-weight: bold;
 }
 
-
-#about .container {
-    padding-top: 70px;
-}
-
 .headingAbout{
     text-align: center;
     margin-bottom: 50px;
@@ -162,10 +159,12 @@ html ::-webkit-scrollbar{
 
 #about .card{
     border-radius: 15px;
+    height: 100%;
 }
 
 #about .card img{
     border-radius: 15px;
+    height: 100%;
 }
 
 @media screen and (max-width:982px){
@@ -191,7 +190,6 @@ html ::-webkit-scrollbar{
 
 #bestSelling{
     width: 100%;
-    height: 90vh;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/best.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -295,7 +293,7 @@ html ::-webkit-scrollbar{
 
 #gallery{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     background-image: url(./Images/blurBack.jpg);
     
@@ -326,6 +324,7 @@ html ::-webkit-scrollbar{
 
 #contact {
     width: 100%;
+    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(./Images/topView.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,7 +379,6 @@ html ::-webkit-scrollbar{
 .container-fluid {
     background-color: #322C2B;
     color: white;
-    padding: 20px;
     text-align: center;
     width: 100%;
 }
