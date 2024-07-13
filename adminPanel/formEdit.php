@@ -49,6 +49,7 @@ if (isset($_POST['btnEdit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       body {
@@ -57,14 +58,32 @@ if (isset($_POST['btnEdit'])) {
         max-height: 100%;
         overflow: hidden;
       }
+      h1{
+        color:white;
+      }
+      .back{
+        background-color:rgba(5, 5, 5, 0.8);
+        border-radius:10px;
+      }
+      .form-label{
+        color:white;
+      }
+      .btn-primary{
+        background-color:white;
+        color:black;
+        border:none;
+      }
+      .btn-primary:hover{
+        background-color:#322C2B;
+      }
     </style>
   </head>
   <body style="overflow-y: scroll;">
     <section class="mt-5 w-100 h-100">
       <div class="container w-100 h-100">
         
-        <div class="">
-            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>
+        <div class="d-flex gap-3">
+            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4"><</button></a>
             <h1>EDIT ITEM</h1>
         </div>
         
@@ -87,7 +106,7 @@ if (isset($_POST['btnEdit'])) {
        
   
         <form action="edit.php?id=<?=$code?>" method="post" enctype="multipart/form-data" class="mt-5 d-flex flex-column align-items-center">
-          <div class="d-md-flex flex-row gap-5">
+          <div class="back d-md-flex flex-row gap-5 p-5">
             <div class="d-flex flex-column gap-3">
               <div>
                 <label for="" class="form-label">Item Code</label>
@@ -106,13 +125,13 @@ if (isset($_POST['btnEdit'])) {
                 <div class="d-flex flex-row gap-3">
                   <div>
                     <input class="form-check-input" type="radio" name="stock" id="yes" value="1" <?= ($row[3] == 1) ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="yes">
+                    <label class="form-label form-check-label" for="yes">
                       Yes
                     </label>
                   </div>
                   <div>
                     <input class="form-check-input" type="radio" name="stock" id="no" value="0" <?= ($row[3] == 0) ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="no">
+                    <label class="form-label form-check-label" for="no">
                       No
                     </label>
       
@@ -126,9 +145,9 @@ if (isset($_POST['btnEdit'])) {
     
             <div class="d-flex flex-column">
     
-              <div class="row mb-3">
-                <label for="imageInput" class="col-sm-2 col-form-label">Image</label>
-                <div class="col-sm-10">
+              <div class="mb-3">
+                <label for="imageInput" class="form-label col-sm-2 col-form-label">Image</label>
+                <div>
                   <input class="form-control col-9" type="file" id="imageInput" name="img" onchange="showImage(this)">
                 </div>
               </div>
@@ -141,7 +160,7 @@ if (isset($_POST['btnEdit'])) {
     
           </div>
     
-          <div class="mt-5 gap-3">
+          <div class="mt-2 d-flex w-50 gap-3 justify-content-end">
             <button type="submit" name="btnEdit" class="btn btn-primary px-3" >EDIT</button>
           </div>
   
