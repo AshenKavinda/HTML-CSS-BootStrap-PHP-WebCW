@@ -83,7 +83,7 @@
             <div class="container-fluid">
               <a id="logoimg" class="navbar-brand" href="#"><img src="./Images/d5d36493419c82448c9529fc57adae25.jpg" alt="Coco Loco" width="100" height="50"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+                <span><img src="Images/main-menu (1).png" alt="" srcset=""></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
