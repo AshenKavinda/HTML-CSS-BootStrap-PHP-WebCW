@@ -97,13 +97,13 @@ function printCompletedOrders($order)
 
                 <div class="btnLink" style="cursor: pointer;" onclick="pendingOrderSection()">
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
-                    <span>Pending Orders</span>
+                    <span>Pending</span>
                   </div>
                 </div>
 
                 <div class="btnLink" style="cursor: pointer;" onclick="completedOrderSection()">
                   <div class="w-100 h-100 d-flex flex-column px-4 justify-content-center">
-                    <span>completed Orders</span>
+                    <span>Completed</span>
                   </div>
                 </div>
 
