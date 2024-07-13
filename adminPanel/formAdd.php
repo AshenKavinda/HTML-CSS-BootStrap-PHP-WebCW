@@ -20,6 +20,7 @@ if (isset($_GET['false'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
       body {
@@ -28,14 +29,32 @@ if (isset($_GET['false'])) {
         max-height: 100%;
         overflow: hidden;
       }
+      h1{
+        color:white ;
+      }
+      .back{
+        background-color:rgba(5, 5, 5, 0.8);
+        border-radius:10px;
+      }
+      .form-label{
+        color:white;
+      }
+      .btn-primary{
+        background-color:white;
+        color:black;
+        border:none;
+      }
+      .btn-primary:hover{
+        background-color:#322C2B;
+      }
     </style>
   </head>
   <body>
     <section class="mt-5 w-100 h-100">
       <div class="container w-100 h-100">
         
-        <div class="">
-            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4">Back</button></a>
+        <div class="d-flex gap-4">
+            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4"><</button></a>
             <h1>ADD ITEM</h1>
         </div>
         
@@ -58,7 +77,7 @@ if (isset($_GET['false'])) {
        
   
         <form action="add.php" id="addItemForm" method="post" enctype="multipart/form-data" class="mt-5 d-flex flex-column align-items-center">
-          <div class="d-md-flex flex-row gap-5">
+          <div class="back d-md-flex flex-row gap-5 p-5">
             <div class="d-flex flex-column gap-3">
               <div>
                 <label for="" class="form-label">Item Code</label>
@@ -77,13 +96,13 @@ if (isset($_GET['false'])) {
                 <div class="d-flex flex-row gap-3">
                   <div>
                     <input class="form-check-input" type="radio" name="stock" id="yes" value="1" checked>
-                    <label class="form-check-label" for="yes">
+                    <label class="form-label form-check-label" for="yes">
                       Yes
                     </label>
                   </div>
                   <div>
                     <input class="form-check-input" type="radio"  name="stock" id="no" value="0">
-                    <label class="form-check-label" for="no">
+                    <label class="form-label form-check-label" for="no">
                       No
                     </label>
       
@@ -97,8 +116,10 @@ if (isset($_GET['false'])) {
     
             <div class="d-flex flex-column">
     
-              <div class="row mb-3">
-                <label for="imageInput" class="col-sm-2 col-form-label">Image</label>
+              <div class="justify-content-end">
+                <div>
+                <label for="imageInput" class="form-label col-sm-2 col-form-label">Image</label>
+                </div>
                 <div class="col-sm-10">
                   <input class="form-control col-9" type="file" id="imageInput" name="img" onchange="showImage(this)">
                 </div>
@@ -112,12 +133,13 @@ if (isset($_GET['false'])) {
     
           </div>
     
-          <div class="mt-5 gap-3">
+          
+  
+        </form>
+        <div class="d-flex gap-2 mt-3 w-75 justify-content-end ">
             <button type="submit" name="btnAdd" class="btn btn-primary px-3" >ADD</button>
             <button class="btn btn-primary px-3" type="reset" >CLEAR</button>
           </div>
-  
-        </form>
   
   
       </div>

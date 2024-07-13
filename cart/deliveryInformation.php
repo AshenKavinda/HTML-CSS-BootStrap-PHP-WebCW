@@ -33,16 +33,17 @@ session_start();
                     <label for="phone" class="form-label" style="color:white;">Phone Number</label>
                     <input type="text" id="phone" name="phone" class="form-control" style="width:600px;">
                 </div>
+                <?php if(isset($_POST['total'])): ?>
+                            <h3 style="color:white;background-color:#3a170d; border-radius:5px; width:250px; height:35px;    align-items: center;display: flex;justify-content: center;">Total : Rs. <?=$_POST['total']?>.00</h3>
+                        <?php endif; ?> 
+                </div> 
                 <div class="container mt-5 w-100 mx-5">
                     <input type="hidden" name="total" value="<?=$_POST['total']?>">
-                    <div class= "mx-5 d-flex" style="gap:240px;"> 
+                    <div class= "mx-5"> 
                         <div>  
-                        <?php if(isset($_POST['total'])): ?>
-                            <h3 style="color:white; margin-left:210px; background-color:#3a170d; border-radius:5px; width:250px; height:35px;    align-items: center;display: flex;justify-content: center;">Total : Rs. <?=$_POST['total']?>.00</h3>
-                        <?php endif; ?> 
-                        </div>    
+   
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary">Place Order</button>
+                            <button type="submit" class="btn btn-primary ">Place Order</button>
                         </div>
                     </div>
                 </div>

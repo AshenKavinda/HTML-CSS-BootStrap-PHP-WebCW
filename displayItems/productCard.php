@@ -85,10 +85,10 @@
             <a class="nav-link active" aria-current="page" href="../frontEndMain/mainMenu.php" style="color: #F6EDCE;">Home</a>
           </li>          
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+
+        <strong style="color: white;">Your cart - </strong>
+        <span class="input-group-text mx-2"><a href="../cart/cart.php"><img src="shopping-cart.png"></a></span>
+
       </div>
     </div>
   </nav> 
