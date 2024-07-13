@@ -271,7 +271,7 @@
 
         <!-- footer-->
         <section id="footerr position-absolute">       
-                <div class="container-fluid">
+                <div class="container-fluid py-3">
                     <div class="row">
                         <div class="col-md-4">
                             <h4>Chocolaté</h4>
