@@ -40,9 +40,12 @@ thead {
     font-size:30px;
     text-align: center; 
 }
+.bod{
+    background-image: url(../adminPanel/blurpro.jpg);
+}
 
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(2024-feb-newsletter-is-dark-chocolate-good-for-your-heart.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
     background-size: cover;
     background-repeat: no-repeat;
     width: 100% !important;
