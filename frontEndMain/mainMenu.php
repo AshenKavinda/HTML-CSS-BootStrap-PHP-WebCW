@@ -83,7 +83,7 @@
             <div class="container-fluid">
               <a id="logoimg" class="navbar-brand" href="#"><img src="./Images/d5d36493419c82448c9529fc57adae25.jpg" alt="Coco Loco" width="100" height="50"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"></i></span>
+                <span><img src="Images/main-menu (1).png" alt="" srcset=""></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -103,11 +103,11 @@
                     <a class="nav-link" href="#contact">Contact Us</a>
                   </li>                       
                 </ul>
-                <form class="d-flex">
+
+                   <strong>Your cart - </strong>
                   <span class="input-group-text mx-2"><a href="../cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit" >Search</button>
-                </form>
+                  
+                
               </div>
             </div>
           </nav>
@@ -271,7 +271,7 @@
 
         <!-- footer-->
         <section id="footerr position-absolute">       
-                <div class="container-fluid">
+                <div class="container-fluid py-3">
                     <div class="row">
                         <div class="col-md-4">
                             <h4>Chocolaté</h4>
