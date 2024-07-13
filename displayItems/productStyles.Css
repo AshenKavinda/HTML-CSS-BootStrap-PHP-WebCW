@@ -211,7 +211,7 @@ html ::-webkit-scrollbar{
 } 
 
 body{
-    background-image: url('choc3.jpeg.jpg') !important;
+    background: linear-gradient(326deg, rgba(43,8,2,1) 30%, rgba(92,47,73,1) 50%, rgba(20,8,10,1) 100%)!important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     width: 100% !important;
