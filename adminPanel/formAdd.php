@@ -50,101 +50,100 @@ if (isset($_GET['false'])) {
     </style>
   </head>
   <body>
-    <section class="mt-5 w-100 h-100">
+    
       <div class="container w-100 h-100">
-        
-        <div class="d-flex gap-4">
-            <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4"><</button></a>
-            <h1>ADD ITEM</h1>
-        </div>
-        
-        <?php if ($recordSuccess == 1): ?>
-            <div class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
-                <strong>Successfuly Added</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-
-        <?php endif; ?>
-
-        <?php if ($recordSuccess == 2): ?>
-            <div class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
-                <strong>Unsuccessfuly</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-
-        <?php endif; ?>
-        
-       
-  
-        <form action="add.php" id="addItemForm" method="post" enctype="multipart/form-data" class="mt-5 d-flex flex-column align-items-center">
-          <div class="back d-md-flex flex-row gap-5 p-5">
-            <div class="d-flex flex-column gap-3">
-              <div>
-                <label for="" class="form-label">Item Code</label>
-                <input type="text" id="code" name="code" class="form-control">
-              </div>
-              <div>
-                <label for="" class="form-label">Item name</label>
-                <input type="text" id="name" name="name" class="form-control">
-              </div>
-              <div>
-                <label for="" class="form-label">Item price</label>
-                <input type="number" id="price" name="price" class="form-control">
-              </div>
-              <div>
-                <label for="" class="form-label">Avilable</label>
-                <div class="d-flex flex-row gap-3">
-                  <div>
-                    <input class="form-check-input" type="radio" name="stock" id="yes" value="1" checked>
-                    <label class="form-label form-check-label" for="yes">
-                      Yes
-                    </label>
-                  </div>
-                  <div>
-                    <input class="form-check-input" type="radio"  name="stock" id="no" value="0">
-                    <label class="form-label form-check-label" for="no">
-                      No
-                    </label>
-      
-                  </div>
-    
-                </div>
-                
-              </div>
-    
-            </div>
-    
-            <div class="d-flex flex-column">
-    
-              <div class="justify-content-end">
-                <div>
-                <label for="imageInput" class="form-label col-sm-2 col-form-label">Image</label>
-                </div>
-                <div class="col-sm-10">
-                  <input class="form-control col-9" type="file" id="imageInput" name="img" onchange="showImage(this)">
-                </div>
-              </div>
-            
-              <div class="d-flex flex-column w-100 h-100 align-items-center">
-                <img src="" name="image" id="imagePreview" class="" style="max-width: 250px;" alt="">
-              </div>
-              
-            </div>
-    
+        <div class="w-100 h-100 d-flex flex-column">
+          <div class="mt-5 d-flex gap-4">
+              <a href="index1.php?panel=1" style="text-decoration: none;color:aliceblue;"><button class="btn btn-primary px-4"><</button></a>
+              <h1>ADD ITEM</h1>
           </div>
-    
           
+          <?php if ($recordSuccess == 1): ?>
+              <div class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                  <strong>Successfuly Added</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
   
-        </form>
-        <div class="d-flex gap-2 mt-3 w-75 justify-content-end ">
-            <button type="submit" name="btnAdd" class="btn btn-primary px-3" >ADD</button>
-            <button class="btn btn-primary px-3" type="reset" >CLEAR</button>
-          </div>
+          <?php endif; ?>
   
+          <?php if ($recordSuccess == 2): ?>
+              <div class="alert alert-warning alert-dismissible fade show mt-2" role="alert">
+                  <strong>Unsuccessfuly</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
   
+          <?php endif; ?>
+          
+
+          <form action="add.php" id="addItemForm" method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-center w-100 h-100 justify-content-center">
+            <div class="d-flex flex-column ">
+              <div class="back d-md-flex flex-row gap-5 p-5">
+                <div class="d-flex flex-column gap-3">
+                  <div>
+                    <label for="" class="form-label">Item Code</label>
+                    <input type="text" id="code" name="code" class="form-control">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Item name</label>
+                    <input type="text" id="name" name="name" class="form-control">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Item price</label>
+                    <input type="number" id="price" name="price" class="form-control">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Avilable</label>
+                    <div class="d-flex flex-row gap-3">
+                      <div>
+                        <input class="form-check-input" type="radio" name="stock" id="yes" value="1" checked>
+                        <label class="form-label form-check-label" for="yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div>
+                        <input class="form-check-input" type="radio"  name="stock" id="no" value="0">
+                        <label class="form-label form-check-label" for="no">
+                          No
+                        </label>
+          
+                      </div>
+        
+                    </div>
+                    
+                  </div>
+        
+                </div>
+        
+                <div class="d-flex flex-column">
+        
+                  <div class="justify-content-end">
+                    <div>
+                    <label for="imageInput" class="form-label col-sm-2 col-form-label">Image</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input class="form-control col-9" type="file" id="imageInput" name="img" onchange="showImage(this)">
+                    </div>
+                  </div>
+                
+                  <div class="d-flex flex-column w-100 h-100 align-items-center">
+                    <img src="" name="image" id="imagePreview" class="" style="max-width: 250px;" alt="">
+                  </div>
+                  
+                </div>
+        
+              </div>
+              <div class="d-flex gap-2 mt-4 justify-content-end ">
+                  <button type="submit" name="btnAdd" class="btn btn-primary px-3" >ADD</button>
+                  <button class="btn btn-primary px-3" type="reset" >CLEAR</button>
+              </div>
+  
+            </div>
+          </form>
+
+        </div>
       </div>
 
-    </section>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
