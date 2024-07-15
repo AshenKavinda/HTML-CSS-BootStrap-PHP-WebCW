@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['valid'])) {
-  header("location: ../signIn/signIn.php");
+  header("location: ../admin/index.php");
   exit();
 }
 require_once("../classes/product.class.php");
@@ -78,6 +78,7 @@ function printCompletedOrders($order)
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="x-icon" href="img/icon2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -109,7 +110,7 @@ function printCompletedOrders($order)
 
 
                 <div class="d-flex flex-column justify-content-end w-100 object-fit-cover position-absolute bottom-0" style="max-height: 100%;">
-                  <form action="../signIn/logOut.php" method="post">
+                  <form action="../admin/logOut.php" method="post">
                     <button class="logout" type="submit"></button>
                   </form>
                 </div>

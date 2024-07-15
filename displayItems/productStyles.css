@@ -61,11 +61,12 @@ html ::-webkit-scrollbar{
 /* nav */
 
 body{
-    background: linear-gradient(326deg, rgba(43,8,2,1) 30%, rgba(92,47,73,1) 50%, rgba(20,8,10,1) 100%)!important;
-    background-size: cover !important;
+    /*background-color: linear-gradient(326deg, rgba(43,8,2,1) 30%, rgba(92,47,73,1) 50%, rgba(20,8,10,1) 100%)!important;*/
+    background: rgb(53, 26, 4) !important;
+    background-size: cover !important; 
     background-repeat: no-repeat !important;
-    width: 100vw !important;
-    height: 100vh !important;
+    height: 100vh;
+    width: 100vw;
 }
 
 .btn-primary{

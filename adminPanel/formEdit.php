@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['valid'])) {
-  header("location: ../signIn/signIn.php");
+  header("location: ../admin/index.php");
   exit();
 }
 require_once("../classes/product.class.php");

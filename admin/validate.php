@@ -13,7 +13,7 @@ if (isset($_POST['username'])) {
         header("location: ../adminPanel/index1.php");
     }
     else {
-        header("location: signIn.php?invalid");
+        header("location: index.php?invalid");
     }
 }
 ?>

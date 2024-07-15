@@ -42,7 +42,7 @@ thead {
 }
 
 body{
-    background-image: url(../../img/blurpro.jpg);
+    background-image: url(../img/blurpro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw !important;
@@ -82,7 +82,7 @@ h2{
 }
 
 .btnUpdate{
-    background-image: url(changes.png);
+    background-image: url(../img/changes.png);
     height: 25px;
     width: 25px;
     border: none;
@@ -92,7 +92,7 @@ h2{
 }
 
 .btnDelete{
-    background-image: url(bin.png) ;
+    background-image: url(../img/bin.png);
     height: 25px;
     width: 25px;
     border: none;
