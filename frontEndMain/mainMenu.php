@@ -2,52 +2,58 @@
 
   //database connection
   require_once("../classes/Order.class.php");
-
-  $product = new Order;
-
-  $result = $product->getBestSellingProduct();
+  $result = null;
+  try {
+    $product = new Order;
+    $result = $product->getBestSellingProduct();
+  } catch (\Throwable $th) {
+    //throw $th;
+  }
 
   function printAll($resdata)
   {
-    while ($row = mysqli_fetch_array($resdata)) {
-      $id = $row[0];
-      $image= $row[4] ;
-      $name = $row[1] ;
-      $price = $row[2] ;
-      $stock = $row[3] ;
-      $av = $stock == 1 ? "Available" : "Out of Stock"; 
-
-      echo "
-
-      <div class='col-md-3'>
-        <form method=\"post\" action=\"../cart/addToCart.php\">
-          <input type=hidden name='item_id' value='$id'> 
-          <input type='hidden'name='item_name' value='$name'>
-          <input type='hidden' name='item_price' value='$price'>
-          <div class='m-2'>
-            <div class='card shadow card-bg '>
-              <img class='card-img-top' src=../adminPanel/pImg/$image >
-
-              <div class='card-body d-flex flex-column my-2 gap-3'>
-              <div>
-                <h5 class='card-title'>$name</h5>
-                <span class='badge badge-success'>Rs.$price.00</span>
-
-                <span class='badge ".($av == 'Available' ? 'badge-available' : 'badge-outofstock')."' style='margin-left: 20px;'>$av</span>
-              </div>
-
-                <div class='w-100 d-flex justify-content-end' >
-                  <div style='badge'>
-                    Quantity <input type='number' id='quantity' name = 'item_quantity' value='1' min='1' style='width:35px; border:none; border-radius:5px;'>
+    if ($resdata) {
+      while ($row = mysqli_fetch_array($resdata)) {
+        $id = $row[0];
+        $image= $row[4] ;
+        $name = $row[1] ;
+        $price = $row[2] ;
+        $stock = $row[3] ;
+        $av = $stock == 1 ? "Available" : "Out of Stock"; 
+  
+        echo "
+  
+        <div class='col-md-3'>
+          <form method=\"post\" action=\"cart/addToCart.php\">
+            <input type=hidden name='item_id' value='$id'> 
+            <input type='hidden'name='item_name' value='$name'>
+            <input type='hidden' name='item_price' value='$price'>
+            <div class='m-2'>
+              <div class='card shadow card-bg '>
+                <img class='card-img-top' src=../adminPanel/pImg/$image >
+  
+                <div class='card-body d-flex flex-column my-2 gap-3'>
+                <div>
+                  <h5 class='card-title'>$name</h5>
+                  <span class='badge badge-success'>Rs.$price.00</span>
+  
+                  <span class='badge ".($av == 'Available' ? 'badge-available' : 'badge-outofstock')."' style='margin-left: 20px;'>$av</span>
+                </div>
+  
+                  <div class='w-100 d-flex justify-content-end' >
+                    <div style='badge'>
+                      Quantity <input type='number' id='quantity' name = 'item_quantity' value='1' min='1' style='width:35px; border:none; border-radius:5px;'>
+                    </div>
                   </div>
-                </div>
-                <button class='btn btn-primary ".($stock == 0 ? 'disabled' : '')."' type='submit' name='add_to_cart'>Add to Cart</button>
-                </div>
+                  <button class='btn btn-primary ".($stock == 0 ? 'disabled' : '')."' type='submit' name='add_to_cart'>Add to Cart</button>
+                  </div>
+              </div>
             </div>
-          </div>
-        </form>
-      </div>   
-      ";
+          </form>
+        </div>   
+        ";
+      }
+      # code...
     }
   }
 ?>
@@ -94,7 +100,7 @@
                     <a class="nav-link" href="#about">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../displayItems/productCard.php">Products</a>
+                    <a class="nav-link" href="displayItems/productCard.php">Products</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#gallery">Gallery</a>
@@ -105,7 +111,7 @@
                 </ul>
 
                    <strong>Your cart - </strong>
-                  <span class="input-group-text mx-2"><a href="../cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
+                  <span class="input-group-text mx-2"><a href="cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
                   
                 
               </div>

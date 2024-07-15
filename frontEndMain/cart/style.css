@@ -40,12 +40,9 @@ thead {
     font-size:30px;
     text-align: center; 
 }
-.bod{
-    background-image: url(../adminPanel/blurpro.jpg);
-}
 
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    background-image: url(../../adminPanel/img/blurpro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100% !important;
