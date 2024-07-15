@@ -31,7 +31,7 @@
             <input type='hidden' name='item_price' value='$price'>
             <div class='m-2'>
               <div class='card shadow card-bg '>
-                <img class='card-img-top' src=../../adminPanel/pImg/$image >
+                <img class='card-img-top' src=../../pImg/$image >
   
                 <div class='card-body d-flex flex-column my-2 gap-3'>
                 <div>

@@ -247,7 +247,7 @@ function printCompletedOrders($order)
         <div class="w-100 h-100" style="border-radius: 2rem; background-color: #1a2127 ;">
           <div class="w-100 h-100 d-flex flex-column justify-content-center mx-3">
             <div class='d-flex gap-3'>
-              <img class="image" src="../displayItems/d5d36493419c82448c9529fc57adae25.jpg" alt="">
+              <img class="image" src="../img/d5d36493419c82448c9529fc57adae25.jpg" alt="">
               <h1>Chocolaté</h1>
             </div>
           </div>

@@ -87,7 +87,7 @@
 
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-              <a id="logoimg" class="navbar-brand" href="#"><img src="./Images/d5d36493419c82448c9529fc57adae25.jpg" alt="Coco Loco" width="100" height="50"></a>
+              <a id="logoimg" class="navbar-brand" href="#"><img src="../img/d5d36493419c82448c9529fc57adae25.jpg" alt="Coco Loco" width="100" height="50"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span><img src="Images/main-menu (1).png" alt="" srcset=""></span>
               </button>
@@ -111,7 +111,7 @@
                 </ul>
 
                    <strong>Your cart - </strong>
-                  <span class="input-group-text mx-2"><a href="cart/cart.php"><img src="./Images/shopping-cart.png"></a></span>
+                  <span class="input-group-text mx-2"><a href="cart/cart.php"><img src="../img/shopping-cart.png"></a></span>
                   
                 
               </div>
@@ -130,7 +130,7 @@
                 <p>In every bite of our chocolate, discover a symphony of flavors<br>
                    crafted to perfection, a testament to our passion for sweetness.</p>
 
-               <a href="../displayItems/productCard.php"><button id="btnOrder">Place Order</button></a>
+               <a href="displayItems/productCard.php"><button id="btnOrder">Place Order</button></a>
 
             </div>
           </section>
@@ -143,7 +143,7 @@
               <div class="row">
                 <div class="col-md-6 h-100">
                   <div class="card">
-                    <img class="" src="./Images/About.jpg" alt="Chocolaté">
+                    <img class="" src="../img/About.jpg" alt="Chocolaté">
                   </div>
                 </div>
 
@@ -189,7 +189,7 @@
                 </div> 
                 
                 <div class="text-center w-100 my-5 ">
-                    <a href="../displayItems/productCard.php" style="text-decoration: none; color: black;">For more...</a>
+                    <a href="displayItems/productCard.php" style="text-decoration: none; color: black;">For more...</a>
                 </div>
 
                 
@@ -211,19 +211,19 @@
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand1.jpg" alt="hand made chocolate">
+                    <img src="../img/hand1.jpg" alt="hand made chocolate">
                   </div>
                 </div>
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand2.jpg" alt="hand made chocolate">
+                    <img src="../img/hand2.jpg" alt="hand made chocolate">
                   </div>
                 </div>
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand3.jpg" alt="hand made chocolate">
+                    <img src="../img/hand3.jpg" alt="hand made chocolate">
                   </div>
                 </div>
   
@@ -233,19 +233,19 @@
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand4.jpg" alt="hand made chocolate">
+                    <img src="../img/hand4.jpg" alt="hand made chocolate">
                   </div>
                 </div>
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand5.jpg" alt="hand made chocolate">
+                    <img src="../img/hand5.jpg" alt="hand made chocolate">
                   </div>
                 </div>
   
                 <div class="col-md-4 py-3 py-md-0">
                   <div class="card">
-                    <img src="./Images/hand6.webp" alt="hand made chocolate">
+                    <img src="../img/hand6.webp" alt="hand made chocolate">
                   </div>
                 </div>
   

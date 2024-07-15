@@ -48,7 +48,7 @@
         <form class="" action="validate.php" method="post">
             
             <div class="d-flex flex-column align-content-center justify-content-center gap-2">
-             <div class="d-flex justify-content-center"><img class="img" src="../displayItems/d5d36493419c82448c9529fc57adae25.jpg" alt=""></div>   
+             <div class="d-flex justify-content-center"><img class="img" src="../img/d5d36493419c82448c9529fc57adae25.jpg" alt=""></div>   
 
             <div class="text-center w-100" style="font-size: 3vw;font-weight: 500;">Welcome!</div>
 

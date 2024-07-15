@@ -42,11 +42,11 @@ thead {
 }
 
 body{
-    background-image: url(../../adminPanel/img/blurpro.jpg);
+    background-image: url(../../img/blurpro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100% !important;
-    height: 100%;
+    width: 100vw !important;
+    height: 100vh;
 }
 h1{
     color: #dee2e6;
