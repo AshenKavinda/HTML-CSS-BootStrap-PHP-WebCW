@@ -5,7 +5,7 @@ if (isset($_POST['code'])) {
     $result = $product->addProduct($_POST['code'],$_POST['name'],$_POST['price'],$_POST['stock'],$_FILES['img']['name']);
     if ($result) {
         $temp = $_FILES['img']['tmp_name'];
-        $path = 'pImg/'.$_FILES['img']['name'] ;
+        $path = '../pImg/'.$_FILES['img']['name'] ;
         move_uploaded_file($temp,$path);
     }
     if ($result) {

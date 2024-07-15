@@ -40,16 +40,13 @@ thead {
     font-size:30px;
     text-align: center; 
 }
-.bod{
-    background-image: url(../adminPanel/blurpro.jpg);
-}
 
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    background-image: url(../img/blurpro.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100% !important;
-    height: 100%;
+    width: 100vw !important;
+    height: 100vh;
 }
 h1{
     color: #dee2e6;
@@ -85,7 +82,7 @@ h2{
 }
 
 .btnUpdate{
-    background-image: url(changes.png);
+    background-image: url(../img/changes.png);
     height: 25px;
     width: 25px;
     border: none;
@@ -95,7 +92,7 @@ h2{
 }
 
 .btnDelete{
-    background-image: url(bin.png) ;
+    background-image: url(../img/bin.png);
     height: 25px;
     width: 25px;
     border: none;

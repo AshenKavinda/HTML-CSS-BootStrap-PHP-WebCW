@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['valid'])) {
-  header("location: ../signIn/signIn.php");
+  header("location: ../admin/index.php");
   exit();
 }
 require_once("../classes/product.class.php");
@@ -153,7 +153,7 @@ if (isset($_POST['btnEdit'])) {
               </div>
             
               <div class="d-flex flex-column w-100 h-100 align-items-center">
-                <img src="pimg/<?=$row[4]?>" name="image" id="imagePreview" class="" style="max-width: 250px;" alt="">
+                <img src="../pimg/<?=$row[4]?>" name="image" id="imagePreview" class="" style="max-width: 250px;" alt="">
               </div>
               
             </div>

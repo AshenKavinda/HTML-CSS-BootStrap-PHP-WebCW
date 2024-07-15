@@ -15,14 +15,14 @@ if (isset($_POST['code'])) {
             header("location: formEdit.php?id=$code&true");
         }
     }else {
-        if (file_exists("pImg/$row[4]")) {
-            unlink("pImg/$row[4]");
+        if (file_exists("../pImg/$row[4]")) {
+            unlink("../pImg/$row[4]");
         }
         
         $result = $product->editProduct($_POST['code'],$_POST['name'],$_POST['price'],$_POST['stock'],$_FILES['img']['name']);
         if ($result) {
             $temp = $_FILES['img']['tmp_name'];
-            $path = 'pImg/'.$_FILES['img']['name'] ;
+            $path = '../pImg/'.$_FILES['img']['name'] ;
             move_uploaded_file($temp,$path);
         }
         if ($result) {
