@@ -1,7 +1,7 @@
 <?php
 session_start();
 try {
-    require_once("../../classes/Order.class.php");
+    require_once("../classes/Order.class.php");
     $order = new Order ;
     if (isset($_POST['total'])) {
         $total = $_POST['total'] ;
@@ -19,11 +19,9 @@ try {
                     $quantity = $item['quantity'];
                     
                     $result = $order->addItemsToOrder($oid,$id,$quantity);
-                    if ($result) {
-                        unset($_SESSION['cart']);
-                    }
-                    header("location: ../displayItems/productCard.php");
                 }   
+                unset($_SESSION['cart']);
+                header("location: ../displayItems/productCard.php");    
             }  
         }
     }
