@@ -23,8 +23,7 @@ if (isset($_POST['add_to_cart'])) {
                 $existItem = true;
                 break;
             }
-        }
-        unset($item);   
+        }  
     }
     if ($existItem == false) {
         $_SESSION['cart'][] = $cart_item;
